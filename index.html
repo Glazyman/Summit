@@ -1,196 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Summit Mergers | Warm Introductions for Business Owners</title>
   <meta name="description" content="Summit Mergers makes warm, private introductions between owners and serious private equity buyers. Outreach only. Simple, discreet, effective." />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="Merger%20Logo.png">
-
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; }
+    
     .hero-bg {
-      background-image: linear-gradient(rgba(6, 12, 24, .55), rgba(6, 12, 24, .65)), url('https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2000&auto=format&fit=crop');
-      background-size: cover; background-position: center; background-repeat: no-repeat;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%), 
+                  url('https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2000&auto=format&fit=crop');
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;
     }
+    
     .soft-bg {
-      background-image: linear-gradient(rgba(255,255,255,.92), rgba(255,255,255,.92)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2000&auto=format&fit=crop');
-      background-size: cover; background-position: center;
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .gradient-border {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      padding: 1px;
+      border-radius: 16px;
+    }
+    
+    .gradient-border > div {
+      background: white;
+      border-radius: 15px;
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
-
-<body class="bg-white text-slate-800">
+<body class="bg-slate-50 text-slate-800 antialiased">
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-<a href="#home">
-  <img src="Merger%20Logo.png" alt="Summit Mergers Logo" class="h-20 w-auto">
-</a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#why-us" class="hover:text-blue-600">Why Us</a>
-        <a href="#process" class="hover:text-blue-600">Process</a>
-        <a href="#industries" class="hover:text-blue-600">Industries</a>
-        <a href="#faq" class="hover:text-blue-600">FAQ</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-        <a href="#contact" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Book</a>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl font-bold tracking-tight gradient-text">Summit Mergers</a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="hover:text-blue-600 transition-colors duration-200">About</a>
+        <a href="#why-us" class="hover:text-blue-600 transition-colors duration-200">Why Us</a>
+        <a href="#process" class="hover:text-blue-600 transition-colors duration-200">Process</a>
+        <a href="#industries" class="hover:text-blue-600 transition-colors duration-200">Industries</a>
+        <a href="#faq" class="hover:text-blue-600 transition-colors duration-200">FAQ</a>
+        <a href="#contact" class="hover:text-blue-600 transition-colors duration-200">Contact</a>
+        <a href="#contact" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl">Book Consultation</a>
       </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-300" aria-label="Toggle menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <button id="menuBtn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 hover:border-slate-300 transition-colors duration-200" aria-label="Toggle menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm font-semibold">
-        <a href="#about" class="py-2">About</a>
-        <a href="#why-us" class="py-2">Why Us</a>
-        <a href="#process" class="py-2">Process</a>
-        <a href="#industries" class="py-2">Industries</a>
-        <a href="#faq" class="py-2">FAQ</a>
-        <a href="#contact" class="py-2">Contact</a>
-        <a href="#contact" class="py-2 px-4 text-center rounded-lg bg-blue-600 text-white">Book</a>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200/50 bg-white/95 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm font-medium">
+        <a href="#about" class="py-2.5 hover:text-blue-600 transition-colors duration-200">About</a>
+        <a href="#why-us" class="py-2.5 hover:text-blue-600 transition-colors duration-200">Why Us</a>
+        <a href="#process" class="py-2.5 hover:text-blue-600 transition-colors duration-200">Process</a>
+        <a href="#industries" class="py-2.5 hover:text-blue-600 transition-colors duration-200">Industries</a>
+        <a href="#faq" class="py-2.5 hover:text-blue-600 transition-colors duration-200">FAQ</a>
+        <a href="#contact" class="py-2.5 hover:text-blue-600 transition-colors duration-200">Contact</a>
+        <a href="#contact" class="py-2.5 px-4 text-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold">Book Consultation</a>
       </div>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section id="home" class="hero-bg text-white">
-      <div class="max-w-6xl mx-auto px-4 py-24 md:py-36">
-        <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-6xl font-bold leading-tight">Warm introductions to serious buyers</h1>
-          <p class="mt-5 text-lg md:text-xl text-blue-100">We research your market, qualify fit, and introduce you to vetted private equity partners. Outreach only. No data rooms. No negotiations.</p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#contact" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold">Book a confidential call</a>
-            <a href="#process" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 font-semibold">See our process</a>
+    <section id="home" class="hero-bg text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+      <div class="relative max-w-7xl mx-auto px-6 py-32 lg:py-40">
+        <div class="max-w-4xl animate-fade-in">
+          <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+            Warm introductions to 
+            <span class="gradient-text bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">serious buyers</span>
+          </h1>
+          <p class="mt-8 text-xl lg:text-2xl text-blue-100/90 leading-relaxed max-w-3xl">
+            We research your market, qualify fit, and introduce you to vetted private equity partners. 
+            <span class="font-semibold">Outreach only. No data rooms. No negotiations.</span>
+          </p>
+          <div class="mt-12 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="group px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+              Book a confidential call
+              <span class="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </a>
+            <a href="#process" class="px-8 py-4 rounded-full glass-effect hover:bg-white/20 font-semibold text-lg transition-all duration-300 border border-white/30">
+              See our process
+            </a>
           </div>
         </div>
       </div>
+      
+      <!-- Floating elements -->
+      <div class="absolute top-20 right-20 w-32 h-32 bg-blue-500/10 rounded-full floating"></div>
+      <div class="absolute bottom-20 left-20 w-24 h-24 bg-purple-500/10 rounded-full floating" style="animation-delay: 1s;"></div>
     </section>
 
     <!-- Creds mini band -->
-    <section class="soft-bg">
-      <div class="max-w-6xl mx-auto px-4 py-10">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center opacity-80">
-          <img src="https://placehold.co/140x44/eef2f7/667085?text=IT+Services" alt="IT services" class="mx-auto"/>
-          <img src="https://placehold.co/140x44/eef2f7/667085?text=Healthcare" alt="Healthcare" class="mx-auto"/>
-          <img src="https://placehold.co/140x44/eef2f7/667085?text=Software" alt="Software" class="mx-auto"/>
-          <img src="https://placehold.co/140x44/eef2f7/667085?text=Manufacturing" alt="Manufacturing" class="mx-auto"/>
+    <section class="soft-bg relative">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+          <div class="text-center group">
+            <div class="w-32 h-16 mx-auto bg-gradient-to-r from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
+              <span class="text-slate-600 font-semibold text-sm">IT Services</span>
+            </div>
+          </div>
+          <div class="text-center group">
+            <div class="w-32 h-16 mx-auto bg-gradient-to-r from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
+              <span class="text-slate-600 font-semibold text-sm">Healthcare</span>
+            </div>
+          </div>
+          <div class="text-center group">
+            <div class="w-32 h-16 mx-auto bg-gradient-to-r from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
+              <span class="text-slate-600 font-semibold text-sm">Software</span>
+            </div>
+          </div>
+          <div class="text-center group">
+            <div class="w-32 h-16 mx-auto bg-gradient-to-r from-slate-100 to-slate-200 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow duration-200">
+              <span class="text-slate-600 font-semibold text-sm">Manufacturing</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight">About Summit Mergers</h2>
-          <p class="mt-5 text-lg text-slate-700">We are an outreach only partner for owners and buyers who want quiet, qualified introductions. We focus exclusively on research, targeted outreach, and warm introductions. Valuation, diligence, negotiation, and closing are handled by the parties and their advisors.</p>
-          <ul class="mt-6 space-y-3 text-slate-700">
-            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-blue-600"></span>Targeted research and shortlists</li>
-            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-blue-600"></span>Private owner outreach that respects time and confidentiality</li>
-            <li class="flex items-start gap-3"><span class="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-blue-600"></span>Warm introductions only when interests align</li>
-          </ul>
+    <section id="about" class="bg-white py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="animate-fade-in">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-8">
+            About <span class="gradient-text">Summit Mergers</span>
+          </h2>
+          <p class="text-xl text-slate-700 leading-relaxed mb-8">
+            We are an <span class="font-semibold">outreach only partner</span> for owners and buyers who want quiet, qualified introductions. 
+            We focus exclusively on research, targeted outreach, and warm introductions.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex-shrink-0 mt-1"></div>
+              <span class="text-slate-700">Targeted research and shortlists</span>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex-shrink-0 mt-1"></div>
+              <span class="text-slate-700">Private owner outreach that respects time and confidentiality</span>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex-shrink-0 mt-1"></div>
+              <span class="text-slate-700">Warm introductions only when interests align</span>
+            </div>
+          </div>
         </div>
-        <div class="overflow-hidden rounded-2xl shadow-xl">
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop" alt="Quiet office" class="w-full h-full object-cover"/>
+        <div class="relative">
+          <div class="gradient-border">
+            <div class="p-2">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop" alt="Quiet office" class="w-full h-80 lg:h-96 object-cover rounded-2xl"/>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Why Owners Choose Us -->
-    <section id="why-us" class="bg-slate-50">
-      <div class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center">Why owners choose us</h2>
-        <p class="mt-4 text-slate-600 text-center max-w-2xl mx-auto">Clear value without the noise. Everything we do is designed for speed, privacy, and fit.</p>
-        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-2xl font-extrabold text-blue-600">Confidential</div>
-            <p class="mt-2 text-slate-600">Introductions happen only with your approval and under NDA when requested.</p>
+    <section id="why-us" class="bg-gradient-to-br from-slate-50 to-blue-50/30 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Why owners <span class="gradient-text">choose us</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Clear value without the noise. Everything we do is designed for speed, privacy, and fit.
+          </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Confidential</h3>
+            <p class="text-slate-600 leading-relaxed">Introductions happen only with your approval and under NDA when requested.</p>
           </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-2xl font-extrabold text-blue-600">Pre vetted buyers</div>
-            <p class="mt-2 text-slate-600">We work with active acquirers who know your sector and can move decisively.</p>
+          
+          <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Pre-vetted buyers</h3>
+            <p class="text-slate-600 leading-relaxed">We work with active acquirers who know your sector and can move decisively.</p>
           </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-2xl font-extrabold text-blue-600">Focused outreach</div>
-            <p class="mt-2 text-slate-600">Research driven shortlists ensure you only spend time on real fit.</p>
+          
+          <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Focused outreach</h3>
+            <p class="text-slate-600 leading-relaxed">Research driven shortlists ensure you only spend time on real fit.</p>
           </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-2xl font-extrabold text-blue-600">Momentum</div>
-            <p class="mt-2 text-slate-600">We keep communication clear and timely from first call to completion.</p>
+          
+          <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Momentum</h3>
+            <p class="text-slate-600 leading-relaxed">We keep communication clear and timely from first call to completion.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Process -->
-    <section id="process" class="bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center">How we get deals done</h2>
-        <p class="mt-4 text-slate-600 text-center max-w-2xl mx-auto">A simple four step path from research to a warm introduction and continued support.</p>
+    <section id="process" class="bg-white py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            How we get <span class="gradient-text">deals done</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            A simple four step path from research to a warm introduction and continued support.
+          </p>
+        </div>
 
-        <div class="mt-12 grid md:grid-cols-4 gap-6">
-          <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-4xl font-extrabold text-blue-600">1</div>
-            <h3 class="mt-3 text-xl font-semibold">Strategic research</h3>
-            <p class="mt-2 text-slate-600">We analyze markets and create targeted lists that align with buyer criteria.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="relative">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-3xl shadow-lg border border-blue-200/50 card-hover">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl font-bold">1</div>
+              <h3 class="text-xl font-bold text-slate-800 mb-4">Strategic research</h3>
+              <p class="text-slate-600 leading-relaxed">We analyze markets and create targeted lists that align with buyer criteria.</p>
+            </div>
           </div>
-          <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-4xl font-extrabold text-blue-600">2</div>
-            <h3 class="mt-3 text-xl font-semibold">Outreach and qualification</h3>
-            <p class="mt-2 text-slate-600">We engage with owners to understand their goals and ensure alignment before any introduction.</p>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-3xl shadow-lg border border-green-200/50 card-hover">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl font-bold">2</div>
+              <h3 class="text-xl font-bold text-slate-800 mb-4">Outreach and qualification</h3>
+              <p class="text-slate-600 leading-relaxed">We engage with owners to understand their goals and ensure alignment before any introduction.</p>
+            </div>
           </div>
-          <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-4xl font-extrabold text-blue-600">3</div>
-            <h3 class="mt-3 text-xl font-semibold">Warm introductions</h3>
-            <p class="mt-2 text-slate-600">We coordinate NDAs and guide the initial exchange of key information.</p>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-3xl shadow-lg border border-purple-200/50 card-hover">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl font-bold">3</div>
+              <h3 class="text-xl font-bold text-slate-800 mb-4">Warm introductions</h3>
+              <p class="text-slate-600 leading-relaxed">We coordinate NDAs and guide the initial exchange of key information.</p>
+            </div>
           </div>
-          <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
-            <div class="text-4xl font-extrabold text-blue-600">4</div>
-            <h3 class="mt-3 text-xl font-semibold">Ongoing support</h3>
-            <p class="mt-2 text-slate-600">We ensure clear and timely communication between all parties, from introduction through closing.</p>
+          
+          <div class="relative">
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-3xl shadow-lg border border-orange-200/50 card-hover">
+              <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 text-white text-2xl font-bold">4</div>
+              <h3 class="text-xl font-bold text-slate-800 mb-4">Ongoing support</h3>
+              <p class="text-slate-600 leading-relaxed">We ensure clear and timely communication between all parties, from introduction through closing.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Industries -->
-    <section id="industries" class="bg-slate-50">
-      <div class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center">Industries we serve</h2>
-        <p class="mt-4 text-slate-600 text-center max-w-2xl mx-auto">Sectors with steady demand from private equity buyers.</p>
+    <section id="industries" class="bg-gradient-to-br from-slate-50 to-blue-50/30 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Industries we <span class="gradient-text">serve</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Sectors with steady demand from private equity buyers.
+          </p>
+        </div>
 
-        <div class="mt-12 grid md:grid-cols-2 gap-8">
-          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop" alt="IT services" class="w-full h-44 object-cover"/>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold">Outsourced IT and business services</h3>
-              <p class="mt-2 text-slate-600">Recurring revenue and sticky relationships attract consistent interest.</p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200/50 card-hover">
+            <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop" alt="IT services" class="w-full h-full object-cover opacity-80"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-slate-800 mb-4">Outsourced IT and business services</h3>
+              <p class="text-slate-600 leading-relaxed">Recurring revenue and sticky relationships attract consistent interest.</p>
             </div>
           </div>
-          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop" alt="Software and SaaS" class="w-full h-44 object-cover"/>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold">Software and SaaS</h3>
-              <p class="mt-2 text-slate-600">Predictable subscriptions and clear product fit create fast engagement.</p>
+          
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200/50 card-hover">
+            <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop" alt="Software and SaaS" class="w-full h-full object-cover opacity-80"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-slate-800 mb-4">Software and SaaS</h3>
+              <p class="text-slate-600 leading-relaxed">Predictable subscriptions and clear product fit create fast engagement.</p>
             </div>
           </div>
-          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-            <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1600&auto=format&fit=crop" alt="Healthcare" class="w-full h-44 object-cover"/>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold">Healthcare services</h3>
-              <p class="mt-2 text-slate-600">Local presence and repeat demand support consolidation plays.</p>
+          
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200/50 card-hover">
+            <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1600&auto=format&fit=crop" alt="Healthcare" class="w-full h-full object-cover opacity-80"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-slate-800 mb-4">Healthcare services</h3>
+              <p class="text-slate-600 leading-relaxed">Local presence and repeat demand support consolidation plays.</p>
             </div>
           </div>
-          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-            <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=1600&auto=format&fit=crop" alt="Manufacturing" class="w-full h-44 object-cover"/>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold">Specialty manufacturing</h3>
-              <p class="mt-2 text-slate-600">Niche products and diversified customers create durable cash flow.</p>
+          
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200/50 card-hover">
+            <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-600 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=1600&auto=format&fit=crop" alt="Manufacturing" class="w-full h-full object-cover opacity-80"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-orange-900/50 to-transparent"></div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-slate-800 mb-4">Specialty manufacturing</h3>
+              <p class="text-slate-600 leading-relaxed">Niche products and diversified customers create durable cash flow.</p>
             </div>
           </div>
         </div>
@@ -198,122 +360,139 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center">FAQ</h2>
-        <p class="mt-4 text-slate-600 text-center max-w-2xl mx-auto">Answers to common questions from owners.</p>
-        <div class="mt-10 max-w-3xl mx-auto space-y-4">
-          <details class="group border border-slate-200 rounded-xl p-4 bg-slate-50">
+    <section id="faq" class="bg-white py-24 lg:py-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Frequently asked <span class="gradient-text">questions</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Answers to common questions from owners.
+          </p>
+        </div>
+        
+        <div class="space-y-6">
+          <details class="group bg-gradient-to-r from-slate-50 to-blue-50/30 border border-slate-200/50 rounded-2xl p-6 card-hover">
             <summary class="flex cursor-pointer list-none items-center justify-between">
-              <span class="text-lg font-semibold text-slate-800">How do you find potential buyers</span>
-              <span class="ml-4 transition-transform group-open:rotate-180">▾</span>
+              <span class="text-lg font-semibold text-slate-800">How do you find potential buyers?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
             </summary>
-            <p class="mt-3 text-slate-700">We maintain relationships with private equity firms and strategic acquirers that are actively investing. We filter by sector, size, and mandate so conversations are relevant from the start.</p>
+            <p class="mt-4 text-slate-700 leading-relaxed">We maintain relationships with private equity firms and strategic acquirers that are actively investing. We filter by sector, size, and mandate so conversations are relevant from the start.</p>
           </details>
-          <details class="group border border-slate-200 rounded-xl p-4 bg-slate-50">
+          
+          <details class="group bg-gradient-to-r from-slate-50 to-blue-50/30 border border-slate-200/50 rounded-2xl p-6 card-hover">
             <summary class="flex cursor-pointer list-none items-center justify-between">
-              <span class="text-lg font-semibold text-slate-800">Is my information kept private</span>
-              <span class="ml-4 transition-transform group-open:rotate-180">▾</span>
+              <span class="text-lg font-semibold text-slate-800">Is my information kept private?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
             </summary>
-            <p class="mt-3 text-slate-700">Yes. We never share your company name or sensitive details without consent. When appropriate, we use NDAs before exchanging information.</p>
+            <p class="mt-4 text-slate-700 leading-relaxed">Yes. We never share your company name or sensitive details without consent. When appropriate, we use NDAs before exchanging information.</p>
           </details>
-          <details class="group border border-slate-200 rounded-xl p-4 bg-slate-50">
+          
+          <details class="group bg-gradient-to-r from-slate-50 to-blue-50/30 border border-slate-200/50 rounded-2xl p-6 card-hover">
             <summary class="flex cursor-pointer list-none items-center justify-between">
-              <span class="text-lg font-semibold text-slate-800">Do you work with all industries</span>
-              <span class="ml-4 transition-transform group-open:rotate-180">▾</span>
+              <span class="text-lg font-semibold text-slate-800">Do you work with all industries?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
             </summary>
-            <p class="mt-3 text-slate-700">We focus on sectors with steady acquisition demand, including IT and business services, software and SaaS, healthcare services, and specialty manufacturing.</p>
+            <p class="mt-4 text-slate-700 leading-relaxed">We focus on sectors with steady acquisition demand, including IT and business services, software and SaaS, healthcare services, and specialty manufacturing.</p>
           </details>
-          <details class="group border border-slate-200 rounded-xl p-4 bg-slate-50">
+          
+          <details class="group bg-gradient-to-r from-slate-50 to-blue-50/30 border border-slate-200/50 rounded-2xl p-6 card-hover">
             <summary class="flex cursor-pointer list-none items-center justify-between">
-              <span class="text-lg font-semibold text-slate-800">What happens after an introduction</span>
-              <span class="ml-4 transition-transform group-open:rotate-180">▾</span>
+              <span class="text-lg font-semibold text-slate-800">What happens after an introduction?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
             </summary>
-            <p class="mt-3 text-slate-700">You and the buyer take the lead on diligence, terms, and closing with your advisors. We remain available to keep communication clear and momentum strong.</p>
+            <p class="mt-4 text-slate-700 leading-relaxed">You and the buyer take the lead on diligence, terms, and closing with your advisors. We remain available to keep communication clear and momentum strong.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Contact with Formspree -->
-    <section id="contact" class="py-16 bg-white">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-4 text-center">Get in touch</h2>
-        <p class="text-slate-600 mb-8 text-center">We keep things simple and private. NDAs available on request.</p>
+    <!-- Contact -->
+    <section id="contact" class="py-24 lg:py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Get in <span class="gradient-text">touch</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            We keep things simple and private. NDAs available on request.
+          </p>
+        </div>
 
         <!-- Success and error alerts -->
-        <div id="formAlert" class="hidden mb-6 rounded-xl border p-4"></div>
+        <div id="formAlert" class="hidden mb-8 rounded-xl border p-4"></div>
 
-        <form id="contactForm" class="grid gap-4 bg-slate-50 border border-slate-200 rounded-2xl p-6">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
-              <input id="name" name="name" type="text" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+          <form id="contactForm" class="grid gap-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                <input id="name" name="name" type="text" required class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="Your full name" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                <input id="email" name="email" type="email" required class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="your.email@company.com" />
+              </div>
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
-              <input id="email" name="email" type="email" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label for="company" class="block text-sm font-medium text-slate-700 mb-2">Company</label>
+              <input id="company" name="company" type="text" class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="Your company name" />
             </div>
-          </div>
-          <div>
-            <label for="company" class="block text-sm font-medium text-slate-700">Company</label>
-            <input id="company" name="company" type="text" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-slate-700">Message</label>
-            <textarea id="message" name="message" rows="5" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-          </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="Tell us about your business and goals..."></textarea>
+            </div>
 
-          <!-- Honeypot for spam -->
-          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+            <!-- Honeypot for spam -->
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
 
-          <!-- Optional subject to see it cleanly in inbox -->
-          <input type="hidden" name="_subject" value="New inquiry from Summit Mergers site" />
+            <!-- Optional subject to see it cleanly in inbox -->
+            <input type="hidden" name="_subject" value="New inquiry from Summit Mergers site" />
 
-          <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
-            <button id="submitBtn" type="submit" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700">
-              Send message
-            </button>
-            <a href="tel:+18454026614" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-800 font-semibold hover:bg-slate-50">
-              Call 845 402 6614
-            </a>
-            <a href="mailto:info@summitmergers.com" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-800 font-semibold hover:bg-slate-50">
-              Email info@summitmergers.com
-            </a>
-          </div>
-        </form>
-
-        <p class="mt-6 text-slate-500 text-sm text-center">
-        </p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+              <button id="submitBtn" type="submit" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all duration-200">
+                Send message
+              </button>
+              <a href="tel:+18454026614" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition-all duration-200">
+                Call 845 402 6614
+              </a>
+              <a href="mailto:info@summitmergers.com" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-700 font-semibold hover:bg-slate-50 transition-all duration-200">
+                Email info@summitmergers.com
+              </a>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 items-start">
+  <footer class="bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-3 gap-12 items-start">
       <div>
-        <h3 class="text-xl font-bold">Summit Mergers</h3>
-        <p class="mt-2 text-slate-600 max-w-sm">Warm introductions through research and qualified outreach. Outreach only. Simple, discreet, effective.</p>
+        <h3 class="text-2xl font-bold gradient-text bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Summit Mergers</h3>
+        <p class="mt-4 text-slate-300 max-w-sm leading-relaxed">
+          Warm introductions through research and qualified outreach. Outreach only. Simple, discreet, effective.
+        </p>
       </div>
       <div>
-        <h4 class="text-sm font-semibold text-slate-500">Navigate</h4>
-        <ul class="mt-3 space-y-2 text-slate-700">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#why-us" class="hover:text-blue-600">Why Us</a></li>
-          <li><a href="#process" class="hover:text-blue-600">Process</a></li>
-          <li><a href="#industries" class="hover:text-blue-600">Industries</a></li>
-          <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        <h4 class="text-sm font-semibold text-slate-400 mb-4">Navigate</h4>
+        <ul class="space-y-3 text-slate-300">
+          <li><a href="#about" class="hover:text-blue-400 transition-colors duration-200">About</a></li>
+          <li><a href="#why-us" class="hover:text-blue-400 transition-colors duration-200">Why Us</a></li>
+          <li><a href="#process" class="hover:text-blue-400 transition-colors duration-200">Process</a></li>
+          <li><a href="#industries" class="hover:text-blue-400 transition-colors duration-200">Industries</a></li>
+          <li><a href="#faq" class="hover:text-blue-400 transition-colors duration-200">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-blue-400 transition-colors duration-200">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-sm font-semibold text-slate-500">Contact</h4>
-        <p class="mt-3 text-slate-700">info@summitmergers.com</p>
-        <p class="text-slate-700">845 402 6614</p>
+        <h4 class="text-sm font-semibold text-slate-400 mb-4">Contact</h4>
+        <p class="text-slate-300 mb-2">info@summitmergers.com</p>
+        <p class="text-slate-300">845 402 6614</p>
       </div>
     </div>
-    <div class="border-t border-slate-200 py-6 text-center text-sm text-slate-500">© 2025 Summit Mergers. All rights reserved.</div>
+    <div class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">© 2025 Summit Mergers. All rights reserved.</div>
   </footer>
 
   <script>
@@ -331,7 +510,7 @@
 
     function showAlert(type, message) {
       alertBox.className = '';
-      alertBox.classList.add('mb-6','rounded-xl','border','p-4');
+      alertBox.classList.add('mb-8','rounded-xl','border','p-4');
       if (type === 'success') {
         alertBox.classList.add('border-green-200','bg-green-50','text-green-800');
       } else {
@@ -358,10 +537,10 @@
 
           if (res.ok) {
             form.reset();
-            showAlert('success', 'Thanks. Your message was sent.');
+            showAlert('success', 'Thanks! Your message was sent successfully.');
           } else {
             const out = await res.json().catch(() => null);
-            const msg = out && out.errors ? out.errors.map(e => e.message).join(' ') : 'There was a problem sending your message. Try again.';
+            const msg = out && out.errors ? out.errors.map(e => e.message).join(' ') : 'There was a problem sending your message. Please try again.';
             showAlert('error', msg);
           }
         } catch (err) {
@@ -372,6 +551,39 @@
         }
       });
     }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
   </script>
 </body>
 </html>
