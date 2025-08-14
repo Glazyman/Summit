@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>For Founders | Summit Mergers | Exit Strategy & Business Transition</title>
+  <meta name="description" content="Summit Mergers helps founders and family-owned businesses with $5M-$50M revenue plan successful exits and transitions. Strategic guidance for your life's work." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%), 
+                  url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2000&auto=format&fit=crop');
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold tracking-tight gradient-text">Summit Mergers</a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html#home" class="hover:text-blue-600 transition-colors duration-200">Home</a>
+        <a href="founders.html" class="hover:text-blue-600 transition-colors duration-200">For Founders</a>
+        <a href="investors.html" class="hover:text-blue-600 transition-colors duration-200">For Investors</a>
+        <a href="#contact" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl">Contact</a>
+      </nav>
+      <button id="menuBtn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 hover:border-slate-300 transition-colors duration-200" aria-label="Toggle menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200/50 bg-white/95 backdrop-blur-xl">
+              <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3 text-sm font-medium">
+          <a href="index.html#home" class="py-2.5 hover:text-blue-600 transition-colors duration-200">Home</a>
+          <a href="founders.html" class="py-2.5 hover:text-blue-600 transition-colors duration-200">For Founders</a>
+          <a href="investors.html" class="py-2.5 hover:text-blue-600 transition-colors duration-200">For Investors</a>
+          <a href="#contact" class="py-2.5 px-4 text-center rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold">Contact</a>
+        </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-bg text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+      <div class="relative max-w-7xl mx-auto px-6 py-32 lg:py-40">
+        <div class="max-w-4xl animate-fade-in">
+          <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+            EXIT STRATEGY & BUSINESS TRANSITION
+            <span class="gradient-text bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">FOR FOUNDERS & FAMILY OWNED BUSINESSES</span>
+          </h1>
+          <p class="mt-8 text-xl lg:text-2xl text-blue-100/90 leading-relaxed max-w-3xl">
+            You've built something extraordinary. Now let's secure the future you've worked so hard to create. Whether you're ready to exit, seeking growth capital, or just exploring your options, we're here to guide you forward.
+          </p>
+          <div class="mt-12 flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="group px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105">
+              Start the conversation
+              <span class="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </a>
+            <a href="#process" class="px-8 py-4 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 font-semibold text-lg transition-all duration-300 border border-white/30">
+              See our process
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Help With -->
+    <section class="bg-white py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Whether you're looking to <span class="gradient-text">grow, transition, or exit</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            We understand that every founder's journey is unique. That's why we offer personalized guidance for whatever path you choose.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Grow Your Company</h3>
+            <p class="text-slate-600 leading-relaxed">Access growth capital and strategic partnerships to scale your business while maintaining control and vision.</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border border-green-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Take Chips Off the Table</h3>
+            <p class="text-slate-600 leading-relaxed">Liquidity for you while keeping the business growing. Find the right balance of personal wealth and continued ownership.</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border border-purple-200/50 card-hover">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Complete Exit Strategy</h3>
+            <p class="text-slate-600 leading-relaxed">Full liquidity event with the right buyer who will honor your legacy and continue your company's success story.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Help -->
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50/30 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            We'll help you get there with
+          </h2>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Targeted Connections</h3>
+            <p class="text-slate-600 leading-relaxed">We start by understanding your unique goals and timeline, then connect you with the right private equity firms and strategic buyers who are actively seeking opportunities in your industry.</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">High-Touch Guidance</h3>
+            <p class="text-slate-600 leading-relaxed">We're your trusted advisor throughout the entire process, from initial planning to closing. Our focus is on facilitating a transaction that achieves your personal and business goals.</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Proven Experience</h3>
+            <p class="text-slate-600 leading-relaxed">Our team brings deep M&A expertise and a track record of successful transactions. Every opportunity we present has been thoroughly vetted and positioned for maximum value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="bg-white py-24 lg:py-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            How we get <span class="gradient-text">deals done</span>
+          </h2>
+          <p class="text-slate-500 max-w-xl mx-auto">
+            A streamlined four-step process designed to maximize value while minimizing disruption to your business.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-8">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-lg font-medium">
+                1
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Strategic Research & Planning</h3>
+              <p class="text-slate-600 leading-relaxed">We start by understanding your goals, timeline, and what matters most to you. Then we conduct comprehensive market analysis to identify the right strategic and financial buyers for your business.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-8">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-lg font-medium">
+                2
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Outreach & Qualification</h3>
+              <p class="text-slate-600 leading-relaxed">We reach out to potential buyers who are serious, vetted, and financially qualified. We take time to understand your concerns and gather key information to ensure a potential fit before any introduction.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-8">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-lg font-medium">
+                3
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Personalized Introductions</h3>
+              <p class="text-slate-600 leading-relaxed">When there's mutual interest, we facilitate warm introductions and oversee the confidentiality process. We guide the exchange of information to enable accurate valuation and informed decision-making.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-8">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white text-lg font-medium">
+                4
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-800 mb-2">Support Through Closing</h3>
+              <p class="text-slate-600 leading-relaxed">Our involvement continues throughout the entire process. We support due diligence efforts, facilitate communication between parties, and work diligently to keep the transaction on track for successful closing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-gradient-to-br from-slate-50 to-blue-50/30 py-24 lg:py-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Frequently asked <span class="gradient-text">questions</span>
+          </h2>
+          <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Answers to common questions from founders and business owners.
+          </p>
+        </div>
+        
+        <div class="space-y-6">
+          <details class="group bg-white border border-slate-200/50 rounded-2xl p-6 card-hover">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="text-lg font-semibold text-slate-800">I'm not ready to sell yet. Can you still help me?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
+            </summary>
+            <p class="mt-4 text-slate-700 leading-relaxed">Absolutely! Many of our clients aren't quite ready to sell when we first connect. We'll work with you to develop a tailored exit strategy that aligns with your timeline and goals, whether that's 2 years or 10. Our job is to ensure you're positioned for success when the time is right.</p>
+          </details>
+          
+          <details class="group bg-white border border-slate-200/50 rounded-2xl p-6 card-hover">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="text-lg font-semibold text-slate-800">Do you require any upfront fees or retainers?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
+            </summary>
+            <p class="mt-4 text-slate-700 leading-relaxed">No, we do not require any upfront fees or retainers from our clients. Our fees are entirely success-based, meaning we only get paid if we are able to complete a successful transaction.</p>
+          </details>
+          
+          <details class="group bg-white border border-slate-200/50 rounded-2xl p-6 card-hover">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="text-lg font-semibold text-slate-800">How do you identify and vet potential buyers?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
+            </summary>
+            <p class="mt-4 text-slate-700 leading-relaxed">Our extensive industry connections and deal-making expertise allow us to quickly identify the right strategic and financial buyers for your business. We don't take a scattershot approach—we surgically target the acquirers who are the best fit, based on your specific goals and the unique attributes of your company.</p>
+          </details>
+          
+          <details class="group bg-white border border-slate-200/50 rounded-2xl p-6 card-hover">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="text-lg font-semibold text-slate-800">How disruptive will the sales process be to my business?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
+            </summary>
+            <p class="mt-4 text-slate-700 leading-relaxed">We pride ourselves on managing the M&A process efficiently and with minimal disruption. Our team will handle all the heavy lifting, from initial outreach to final closing. We'll work closely with you and your staff to ensure business continuity throughout the transaction, so you can stay focused on running your company.</p>
+          </details>
+          
+          <details class="group bg-white border border-slate-200/50 rounded-2xl p-6 card-hover">
+            <summary class="flex cursor-pointer list-none items-center justify-between">
+              <span class="text-lg font-semibold text-slate-800">Will I lose control if I partner with a private equity firm?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180 text-blue-600">▾</span>
+            </summary>
+            <p class="mt-4 text-slate-700 leading-relaxed">Our approach is to find the right strategic fit—a buyer that shares your vision and values and will empower you to continue leading the business if you so choose. We'll work closely with you to structure a deal that gives you the right balance of liquidity and ongoing involvement.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 lg:py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Ready to explore your <span class="gradient-text">options</span>?
+          </h2>
+          <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Let's discuss your goals and how we can help you achieve them. NDAs available on request.
+          </p>
+        </div>
+
+        <!-- Success and error alerts -->
+        <div id="formAlert" class="hidden mb-8 rounded-xl border p-4"></div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8">
+          <form id="contactForm" class="grid gap-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Name</label>
+                <input id="name" name="name" type="text" required class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="Your full name" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                <input id="email" name="email" type="email" required class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="your.email@company.com" />
+              </div>
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-slate-700 mb-2">Company</label>
+              <input id="company" name="company" type="text" class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="Your company name" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" placeholder="Tell us about your business and goals..."></textarea>
+            </div>
+
+            <!-- Honeypot for spam -->
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <!-- Optional subject to see it cleanly in inbox -->
+            <input type="hidden" name="_subject" value="New inquiry from Summit Mergers founders page" />
+
+            <div class="flex flex-col sm:flex-row gap-4 sm:items-center">
+              <button id="submitBtn" type="submit" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all duration-200">
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-3 gap-12 items-start">
+      <div>
+        <h3 class="text-2xl font-bold gradient-text bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Summit Mergers</h3>
+        <p class="mt-4 text-slate-300 max-w-sm leading-relaxed">
+          Summit Mergers & Acquisitions is a boutique M&A advisory firm specializing in connecting family-owned and founder-led businesses with strategic investors.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-400 mb-4">Navigate</h4>
+        <ul class="space-y-3 text-slate-300">
+          <li><a href="index.html#home" class="hover:text-blue-400 transition-colors duration-200">Home</a></li>
+          <li><a href="founders.html" class="hover:text-blue-400 transition-colors duration-200">For Founders</a></li>
+          <li><a href="investors.html" class="hover:text-blue-400 transition-colors duration-200">For Investors</a></li>
+          <li><a href="#contact" class="hover:text-blue-400 transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-slate-400 mb-4">Contact</h4>
+        <p class="text-slate-300 mb-2">info@summitmergers.com</p>
+        <p class="text-slate-300">845 402 6614</p>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">© 2025 Summit Mergers. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Formspree submit
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formAlert');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function showAlert(type, message) {
+      alertBox.className = '';
+      alertBox.classList.add('mb-8','rounded-xl','border','p-4');
+      if (type === 'success') {
+        alertBox.classList.add('border-green-200','bg-green-50','text-green-800');
+      } else {
+        alertBox.classList.add('border-red-200','bg-red-50','text-red-800');
+      }
+      alertBox.textContent = message;
+      alertBox.classList.remove('hidden');
+    }
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch('https://formspree.io/f/mzzvwzvb', {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.reset();
+            showAlert('success', 'Thanks! Your message was sent successfully.');
+          } else {
+            const out = await res.json().catch(() => null);
+            const msg = out && out.errors ? out.errors.map(e => e.message).join(' ') : 'There was a problem sending your message. Please try again.';
+            showAlert('error', msg);
+          }
+        } catch (err) {
+          showAlert('error', 'There was a network problem. Please try again.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send message';
+        }
+      });
+    }
+  </script>
+</body>
+</html> 
