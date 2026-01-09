@@ -244,17 +244,24 @@
 
         .step-header {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             gap: 1rem;
             margin-bottom: 1rem;
         }
 
         .step-num {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 3rem;
             font-weight: 600;
-            color: var(--text-primary);
-            border-bottom: 2px solid var(--accent);
+            color: var(--accent);
+            line-height: 1;
+            opacity: 0.15;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-top: -2rem;
         }
 
         /* Stats & About */
@@ -267,8 +274,8 @@
         }
 
         .stats-list {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 2.5rem;
         }
 
@@ -289,6 +296,100 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-result {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 4rem auto 0;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--muted);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 2rem 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
         }
 
         /* Form */
@@ -432,8 +533,8 @@
                 headline: "Transition with Clarity and Discretion",
                 subheadline: "Connecting established business owners with institutional capital and strategic acquirers.",
                 body: "Exit planning is a significant milestone. We provide a quiet, professional alternative to public listings, focusing on high-quality introductions and a seamless transaction path.",
-                primaryBtn: "Inquire Confidentially",
-                secondaryBtn: "Our Methodology"
+                primaryBtn: "Get a Confidential Assessment",
+                secondaryBtn: "View Our Process"
             },
             services: {
                 heading: "Advisory Expertise",
@@ -476,9 +577,70 @@
                 p1: "Summit Mergers is a boutique advisory firm specializing in the quiet transfer of high-performing service businesses.",
                 p2: "We understand that your business is your life’s work. Our mission is to honor that legacy by finding a buyer who values your achievements as much as you do, without the noise of a public auction.",
                 stats: [
-                    { val: "24h", label: "Professional Response" },
-                    { val: "Institutional", label: "Buyer Relationships" },
-                    { val: "Performance", label: "Based Compensation" }
+                    { val: "24h", label: "Response Time" },
+                    { val: "100%", label: "Confidential Process" },
+                    { val: "Zero", label: "Seller Fees" },
+                    { val: "6-12mo", label: "Avg. Close Time" }
+                ]
+            },
+            testimonials: {
+                heading: "Client Success Stories",
+                subheading: "Proven Results",
+                items: [
+                    {
+                        quote: "Summit Mergers made the sale of my 20-year business seamless. Their discretion and professionalism were outstanding. They found the perfect buyer who valued what we built.",
+                        author: "Michael R.",
+                        role: "Former Owner, IT Services Firm",
+                        result: "Sold in 6 months"
+                    },
+                    {
+                        quote: "I appreciated their no-nonsense approach and zero upfront fees. They truly work for you, not against you. The buyer they connected us with was exactly what we were looking for.",
+                        author: "Sarah L.",
+                        role: "Owner, Commercial Fencing Company",
+                        result: "$8M Exit"
+                    },
+                    {
+                        quote: "The team handled everything with complete confidentiality. My employees and clients never knew until we were ready to announce. That level of discretion was invaluable.",
+                        author: "James T.",
+                        role: "Founder, Access Control & Security Solutions",
+                        result: "Strategic Acquisition"
+                    },
+                    {
+                        quote: "After 15 years running my HVAC business, I wanted to retire but didn't know where to start. Summit walked me through every step and found a buyer who kept my team intact. Couldn't have asked for a better outcome.",
+                        author: "Robert M.",
+                        role: "Owner, HVAC & Mechanical Services",
+                        result: "$12M Sale"
+                    }
+                ]
+            },
+            faqs: {
+                heading: "Frequently Asked Questions",
+                subheading: "Clear Answers",
+                items: [
+                    {
+                        q: "What types of businesses do you work with?",
+                        a: "We specialize in profitable service-based businesses with annual revenues between $2M-$50M. This includes HVAC companies, access control and security solutions providers, fencing contractors, professional services, technology, healthcare services, manufacturing, and other established enterprises with strong fundamentals."
+                    },
+                    {
+                        q: "How long does the typical sale process take?",
+                        a: "The timeline varies based on your business and market conditions, but most transactions close within 6-12 months from initial engagement. We work efficiently while ensuring you get the best possible outcome."
+                    },
+                    {
+                        q: "How do you maintain confidentiality?",
+                        a: "Discretion is paramount. We use NDAs with all potential buyers, present your business anonymously in initial outreach, and carefully manage all information flow. Your employees, clients, and competitors won't know unless you choose to tell them."
+                    },
+                    {
+                        q: "Do I pay any fees as the seller?",
+                        a: "No. We operate on a success-fee basis paid exclusively by the acquirer upon closing. You pay nothing—ever. This ensures our interests are perfectly aligned with yours."
+                    },
+                    {
+                        q: "What if I'm not ready to sell for a few years?",
+                        a: "Perfect. Many of our best relationships start years before a transaction. We can help you understand your business value, identify areas to enhance valuation, and position you for success when the time is right."
+                    },
+                    {
+                        q: "How do you find qualified buyers?",
+                        a: "We maintain an active network of institutional buyers (private equity firms, family offices) and strategic acquirers. We also conduct targeted research to identify buyers specifically interested in businesses like yours."
+                    }
                 ]
             },
             contact: {
@@ -550,9 +712,9 @@
                                 <div class="step">
                                     <div class="step-header">
                                         <span class="step-num">${step.num}</span>
-                                        <h3>${step.title}</h3>
                                     </div>
-                                    <p style="color: var(--text-secondary); font-size: 0.9rem;">${step.desc}</p>
+                                    <h3>${step.title}</h3>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.75rem;">${step.desc}</p>
                                 </div>
                             `).join('')}
                         </div>
@@ -584,7 +746,52 @@
                 </section>
             `;
 
-            // 6. Contact
+            // 6. Testimonials
+            main.innerHTML += `
+                <section id="testimonials" style="background: var(--muted);">
+                    <div class="container" style="text-align: center;">
+                        <span class="kicker">${CONTENT.testimonials.subheading}</span>
+                        <h2>${CONTENT.testimonials.heading}</h2>
+                        <div class="testimonial-grid">
+                            ${CONTENT.testimonials.items.map(item => `
+                                <div class="testimonial-card">
+                                    <p class="testimonial-quote">"${item.quote}"</p>
+                                    <div>
+                                        <div class="testimonial-author">${item.author}</div>
+                                        <div class="testimonial-role">${item.role}</div>
+                                        <div class="testimonial-result">${item.result}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+            `;
+
+            // 7. FAQs
+            main.innerHTML += `
+                <section id="faqs">
+                    <div class="container" style="text-align: center;">
+                        <span class="kicker">${CONTENT.faqs.subheading}</span>
+                        <h2>${CONTENT.faqs.heading}</h2>
+                        <div class="faq-container">
+                            ${CONTENT.faqs.items.map((item, index) => `
+                                <div class="faq-item" data-faq="${index}">
+                                    <div class="faq-question">
+                                        <span>${item.q}</span>
+                                        <span class="faq-icon">+</span>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>${item.a}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+            `;
+
+            // 8. Contact
             main.innerHTML += `
                 <section id="contact" style="border-bottom: none">
                     <div class="container">
@@ -729,6 +936,22 @@
             }, observerOptions);
 
             sections.forEach(section => observer.observe(section));
+
+            // FAQ Toggles
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const wasActive = item.classList.contains('active');
+                    // Close all FAQs
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                    });
+                    // Open clicked FAQ if it wasn't already active
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
         }
 
         window.onload = init;
