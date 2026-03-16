@@ -123,6 +123,39 @@
             color: var(--text-primary);
         }
 
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin: -0.5rem -0.5rem -0.5rem 0;
+            width: 44px;
+            height: 44px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            z-index: 1001;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--accent);
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+        header.nav-open .mobile-menu-btn span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        header.nav-open .mobile-menu-btn span:nth-child(2) {
+            opacity: 0;
+        }
+        header.nav-open .mobile-menu-btn span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
         /* Buttons */
         .btn {
             display: inline-block;
@@ -476,7 +509,34 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .mobile-menu-btn { display: flex; }
+            nav { position: relative; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 81px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                margin: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+                z-index: 999;
+                max-height: calc(100vh - 81px);
+                overflow-y: auto;
+            }
+            .nav-links a {
+                padding: 1.1rem 2.5rem;
+                border-bottom: 1px solid var(--border);
+                font-size: 0.85rem;
+            }
+            .nav-links a:last-child { border-bottom: none; }
+            header.nav-open .nav-links { display: flex; }
             section { padding: 80px 0; }
             .about-grid { grid-template-columns: 1fr; gap: 3rem; }
             .form-grid { grid-template-columns: 1fr; }
@@ -495,7 +555,10 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">Summit Mergers</a>
-                <div class="nav-links">
+                <button type="button" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" id="mobile-menu-btn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-links" id="nav-links">
                     <a href="deals.html">Deals</a>
                     <a href="#services">Expertise</a>
                     <a href="#process">Methodology</a>
@@ -956,7 +1019,42 @@
             });
         }
 
-        window.onload = init;
+        function setupMobileNav() {
+            const header = document.querySelector('header');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            if (!menuBtn || !navLinks) return;
+            function closeMenu() {
+                header.classList.remove('nav-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            function openMenu() {
+                header.classList.add('nav-open');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            menuBtn.addEventListener('click', () => {
+                if (header.classList.contains('nav-open')) closeMenu();
+                else openMenu();
+            });
+            navLinks.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', closeMenu);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) closeMenu();
+            });
+        }
+
+        window.onload = function () {
+            init();
+            setupMobileNav();
+        };
     </script>
 </body>
 </html>
