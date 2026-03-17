@@ -593,7 +593,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <div class="nav-links" id="nav-links">
-                    <a href="deals.html" class="active">Deals</a>
+                    <a href="opportunities.html" class="active">Opportunities</a>
                     <a href="index.html#services">Expertise</a>
                     <a href="index.html#process">Methodology</a>
                     <a href="index.html#about">About</a>
@@ -1586,6 +1586,17 @@
 
     <script>
         document.getElementById('year').innerText = new Date().getFullYear();
+
+        // Wire each "Request Details" button to pass the listing name to the contact form
+        document.querySelectorAll('.deal-card').forEach(card => {
+            const name = card.querySelector('.card-name') ? card.querySelector('.card-name').textContent.trim() : '';
+            const location = card.querySelector('.card-location') ? card.querySelector('.card-location').textContent.trim() : '';
+            const label = location ? name + ' \u2014 ' + location : name;
+            const btn = card.querySelector('.card-footer .btn');
+            if (btn && label) {
+                btn.href = 'index.html#contact?listing=' + encodeURIComponent(label);
+            }
+        });
 
         // Mobile nav
         (function() {
