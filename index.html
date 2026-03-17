@@ -574,7 +574,7 @@
                     <span></span><span></span><span></span>
                 </button>
                 <div class="nav-links" id="nav-links">
-                    <a href="deals.html">Deals</a>
+                    <a href="opportunities.html">Opportunities</a>
                     <a href="#services">Expertise</a>
                     <a href="#process">Methodology</a>
                     <a href="#about">About</a>
@@ -1066,9 +1066,31 @@
             });
         }
 
+        function prefillFromUrl() {
+            const hash = window.location.hash; // e.g. #contact?listing=Commercial%20HVAC...
+            const match = hash.match(/[?&]listing=([^&]*)/);
+            if (match) {
+                const listing = decodeURIComponent(match[1]);
+                const msgField = document.getElementById('message');
+                if (msgField && !msgField.value) {
+                    msgField.value = 'I am interested in the following listing: ' + listing;
+                }
+                // Scroll to the contact section after render
+                const target = document.getElementById('contact');
+                if (target) {
+                    setTimeout(() => {
+                        const offset = 80;
+                        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }, 100);
+                }
+            }
+        }
+
         window.onload = function () {
             init();
             setupMobileNav();
+            prefillFromUrl();
         };
     </script>
 </body>
