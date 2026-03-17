@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Summit Mergers</title>
+    <meta name="description" content="Summit Mergers Terms of Service — the terms and conditions governing use of our website and advisory services.">
+    <link rel="icon" type="image/png" href="smfavicon.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+        :root {
+            --bg: #ffffff;
+            --text-primary: #0a0a0a;
+            --text-secondary: #4a4a4a;
+            --accent: #1a1a1a;
+            --muted: #f8f9fa;
+            --border: #e5e5e5;
+            --max-width: 1000px;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2.5rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        .kicker {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 1.25rem;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--text-primary); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin: -0.5rem -0.5rem -0.5rem 0;
+            width: 44px;
+            height: 44px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            z-index: 1001;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--accent);
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+        header.nav-open .mobile-menu-btn span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        header.nav-open .mobile-menu-btn span:nth-child(2) { opacity: 0; }
+        header.nav-open .mobile-menu-btn span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        .page-hero {
+            padding: 80px 0 70px;
+            background: linear-gradient(to bottom, #fff, #fafafa);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 1rem;
+        }
+
+        .page-hero .meta {
+            font-size: 0.8rem;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .legal-body {
+            padding: 70px 0 100px;
+        }
+
+        .legal-content {
+            max-width: 780px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.35rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .legal-content h2:first-child {
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .legal-content h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 1.75rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-primary);
+        }
+
+        .legal-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+        }
+
+        .legal-content ul, .legal-content ol {
+            margin: 0 0 1.25rem 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .legal-content li { margin-bottom: 0.4rem; }
+
+        .legal-content a {
+            color: var(--text-primary);
+            text-underline-offset: 3px;
+        }
+
+        .legal-content a:hover { color: var(--text-secondary); }
+
+        .notice-box {
+            background: var(--muted);
+            border-left: 3px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .notice-box.warning {
+            border-left-color: #b45309;
+            background: #fffbeb;
+        }
+
+        .toc {
+            background: var(--muted);
+            padding: 2rem 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .toc p {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+
+        .toc ol {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.9;
+        }
+
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .toc a:hover { color: var(--text-primary); }
+
+        footer {
+            background: var(--muted);
+            border-top: 1px solid var(--border);
+            padding: 3.5rem 0 2rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-top p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            color: #999;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .footer-bottom a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover { color: var(--text-secondary); }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 2rem 2.5rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+                z-index: 999;
+            }
+            header.nav-open .nav-links { display: flex; }
+            .nav-links a { font-size: 1rem; }
+            .container { padding: 0 1.25rem; }
+            .page-hero { padding: 56px 0 48px; }
+            .legal-body { padding: 48px 0 70px; }
+            .footer-top { flex-direction: column; gap: 1.5rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Summit Mergers</a>
+                <button type="button" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" id="mobile-menu-btn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-links" id="nav-links">
+                    <a href="opportunities.html">Opportunities</a>
+                    <a href="index.html#services">Expertise</a>
+                    <a href="index.html#process">Methodology</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="container">
+            <span class="kicker">Legal</span>
+            <h1>Terms of Service</h1>
+            <p class="meta">Effective Date: March 17, 2026 &nbsp;·&nbsp; Last Revised: March 17, 2026</p>
+        </div>
+    </div>
+
+    <div class="legal-body">
+        <div class="container">
+            <div class="legal-content">
+
+                <div class="notice-box warning">
+                    <strong>PLEASE READ THESE TERMS CAREFULLY.</strong> By accessing or using the Summit Mergers website or engaging our advisory services, you agree to be bound by these Terms of Service. If you do not agree to these Terms, you must immediately discontinue use of this Site and our Services. These Terms constitute a legally binding agreement between you and Summit Mergers.
+                </div>
+
+                <div class="toc">
+                    <p>Table of Contents</p>
+                    <ol>
+                        <li><a href="#t1">Definitions</a></li>
+                        <li><a href="#t2">Acceptance of Terms</a></li>
+                        <li><a href="#t3">Description of Services</a></li>
+                        <li><a href="#t4">No Financial, Legal, or Investment Advice</a></li>
+                        <li><a href="#t5">Engagement and Fee Structure</a></li>
+                        <li><a href="#t6">Confidentiality and Non-Disclosure</a></li>
+                        <li><a href="#t7">User Representations and Warranties</a></li>
+                        <li><a href="#t8">Prohibited Conduct</a></li>
+                        <li><a href="#t9">Intellectual Property</a></li>
+                        <li><a href="#t10">No Guarantee of Transaction Outcome</a></li>
+                        <li><a href="#t11">Disclaimer of Warranties</a></li>
+                        <li><a href="#t12">Limitation of Liability</a></li>
+                        <li><a href="#t13">Indemnification</a></li>
+                        <li><a href="#t14">Third-Party Links and Services</a></li>
+                        <li><a href="#t15">Non-Solicitation</a></li>
+                        <li><a href="#t16">Governing Law and Dispute Resolution</a></li>
+                        <li><a href="#t17">Severability and Waiver</a></li>
+                        <li><a href="#t18">Entire Agreement</a></li>
+                        <li><a href="#t19">Modifications to Terms</a></li>
+                        <li><a href="#t20">Contact Information</a></li>
+                    </ol>
+                </div>
+
+                <h2 id="t1">1. Definitions</h2>
+                <p>For purposes of these Terms of Service, the following definitions apply:</p>
+                <ul>
+                    <li><strong>"Summit Mergers," "we," "our," or "us"</strong> refers to Summit Mergers, an M&amp;A advisory and intermediary firm.</li>
+                    <li><strong>"Site"</strong> means the website located at summitmergers.com and all associated pages, content, and features.</li>
+                    <li><strong>"Services"</strong> means the merger and acquisition advisory, intermediary, and brokerage services provided by Summit Mergers, whether initiated through the Site or through direct engagement.</li>
+                    <li><strong>"User," "you," or "your"</strong> refers to any individual or entity accessing the Site or engaging with our Services, including prospective sellers, prospective buyers, and general visitors.</li>
+                    <li><strong>"Confidential Information"</strong> means any non-public business, financial, operational, or strategic information disclosed by one party to another in connection with a potential transaction.</li>
+                    <li><strong>"Engagement Agreement"</strong> means any separate written agreement executed between Summit Mergers and a client governing the specific terms of an advisory or intermediary engagement.</li>
+                    <li><strong>"NDA"</strong> means a non-disclosure agreement executed between parties prior to the exchange of Confidential Information relating to a specific transaction opportunity.</li>
+                </ul>
+
+                <h2 id="t2">2. Acceptance of Terms</h2>
+                <p>By accessing the Site, submitting an inquiry form, communicating with Summit Mergers, or engaging our Services in any capacity, you represent that: (a) you are at least 18 years of age; (b) you have the legal capacity and authority to enter into these Terms; (c) if acting on behalf of a business entity, you are duly authorized to bind that entity; and (d) you have read, understood, and agree to be bound by these Terms and our Privacy Policy.</p>
+                <p>If you are accessing the Site on behalf of a corporation, limited liability company, partnership, or other legal entity, "you" includes both you individually and that entity, and you represent that you have the authority to bind such entity to these Terms.</p>
+
+                <h2 id="t3">3. Description of Services</h2>
+                <p>Summit Mergers provides merger and acquisition advisory and intermediary services, including but not limited to:</p>
+                <ul>
+                    <li>Preliminary business valuation assessment and market positioning;</li>
+                    <li>Identification, vetting, and introduction of qualified prospective buyers or sellers;</li>
+                    <li>Management of confidential information processes, including the preparation and distribution of Confidential Information Memoranda ("CIMs") under NDA;</li>
+                    <li>Facilitation of due diligence processes;</li>
+                    <li>Transaction structuring guidance and coordination with legal and financial advisors;</li>
+                    <li>Closing coordination and post-transaction transition support.</li>
+                </ul>
+                <p>The specific scope of Services provided to any individual client will be governed by a separate Engagement Agreement. Nothing on this Site or in these Terms constitutes an offer to provide Services or creates an advisory relationship. An advisory relationship is established only upon the execution of a written Engagement Agreement signed by both parties.</p>
+
+                <h2 id="t4">4. No Financial, Legal, or Investment Advice</h2>
+                <div class="notice-box">
+                    Summit Mergers is an M&A intermediary and advisory firm. The information and content provided on this Site, including descriptions of business listings, financial metrics, and market commentary, are provided for general informational purposes only and do not constitute financial advice, investment advice, legal advice, tax advice, or any other form of professional advice.
+                </div>
+                <p>All financial information presented on this Site, including revenue figures, EBITDA estimates, valuation ranges, and other metrics, is derived from information provided by business owners and has not been independently verified by Summit Mergers unless expressly stated otherwise. Summit Mergers makes no representations or warranties as to the accuracy, completeness, or reliability of such information.</p>
+                <p>You should consult with qualified independent legal counsel, financial advisors, accountants, and other professionals before making any acquisition, investment, or business decision. Summit Mergers' role is that of an intermediary facilitating introductions and transaction processes — not that of a fiduciary advisor, licensed securities broker-dealer, registered investment advisor, or attorney.</p>
+
+                <h2 id="t5">5. Engagement and Fee Structure</h2>
+
+                <h3>Performance-Based Compensation</h3>
+                <p>Summit Mergers operates on a success-fee basis. No fees are charged to business sellers for the advisory and intermediary services described on this Site unless otherwise specified in a written Engagement Agreement. Compensation, if applicable, is earned and payable upon the successful closing of a transaction and is paid by the acquiring party unless otherwise expressly agreed in writing.</p>
+
+                <h3>Engagement Agreement Controls</h3>
+                <p>Any fee arrangement, exclusivity period, tail period, carve-outs, or other material terms specific to an engagement will be set forth in a separate Engagement Agreement. In the event of any conflict between these Terms and an executed Engagement Agreement, the Engagement Agreement shall control with respect to the specific engagement.</p>
+
+                <h3>Tail Period</h3>
+                <p>Unless otherwise specified in an Engagement Agreement, if a transaction is consummated within a defined period following the termination or expiration of an engagement with a buyer or seller introduced by Summit Mergers, Summit Mergers may be entitled to its success fee. The specific tail period will be set forth in the applicable Engagement Agreement.</p>
+
+                <h3>No Guarantee of Transaction Completion</h3>
+                <p>Summit Mergers does not guarantee the completion, pricing, or terms of any transaction. The success fee is earned solely upon actual closing of a qualifying transaction.</p>
+
+                <h2 id="t6">6. Confidentiality and Non-Disclosure</h2>
+
+                <h3>Pre-NDA Inquiries</h3>
+                <p>Information submitted through inquiry forms on this Site will be treated as confidential by Summit Mergers and will not be disclosed to third parties except as described in our Privacy Policy. However, submission of an inquiry form does not constitute the execution of a formal NDA.</p>
+
+                <h3>Transaction-Level Confidentiality</h3>
+                <p>Prior to receiving any Confidential Information regarding a specific transaction opportunity — including but not limited to the identity of a seller, CIM materials, financial statements, or operational details — all parties will be required to execute a mutually acceptable NDA. The terms of such NDA will govern the use and protection of Confidential Information exchanged in connection with that transaction.</p>
+
+                <h3>User Obligations</h3>
+                <p>By using this Site and engaging with Summit Mergers' Services, you agree that: (a) any Confidential Information disclosed to you shall be used solely to evaluate a specific transaction opportunity; (b) you will not disclose Confidential Information to any third party without prior written consent; (c) you will protect Confidential Information with at least the same degree of care you use to protect your own confidential information, but in no event less than reasonable care; and (d) you will promptly notify Summit Mergers of any unauthorized disclosure or use of Confidential Information.</p>
+
+                <h2 id="t7">7. User Representations and Warranties</h2>
+                <p>By using the Site or engaging our Services, you represent and warrant that:</p>
+                <ul>
+                    <li>All information you provide to Summit Mergers — including financial data, business descriptions, and contact information — is accurate, complete, and not misleading in any material respect;</li>
+                    <li>You have the legal right and authority to disclose any information you provide;</li>
+                    <li>You are not subject to any legal, contractual, or regulatory prohibition that would prevent you from engaging in a business acquisition or sale transaction;</li>
+                    <li>You are not currently party to any exclusive listing or representation agreement with another intermediary or broker that would conflict with your engagement of Summit Mergers, unless you have disclosed such arrangement to us in writing;</li>
+                    <li>Your use of the Site and Services complies with all applicable laws and regulations.</li>
+                </ul>
+
+                <h2 id="t8">8. Prohibited Conduct</h2>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use the Site or Services for any unlawful purpose or in violation of any applicable law or regulation;</li>
+                    <li>Submit false, misleading, or fraudulent information through any inquiry form or communication;</li>
+                    <li>Attempt to circumvent Summit Mergers in connection with any transaction involving a party introduced by Summit Mergers, except as expressly permitted in a written Engagement Agreement;</li>
+                    <li>Use Confidential Information obtained through Summit Mergers for any purpose other than evaluating the specific transaction opportunity for which it was disclosed;</li>
+                    <li>Reverse engineer, decompile, scrape, or attempt to extract proprietary data or source code from the Site;</li>
+                    <li>Transmit viruses, malware, or other harmful code through the Site;</li>
+                    <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity;</li>
+                    <li>Engage in any conduct that could damage, disable, or impair the Site or interfere with any other party's use of the Site;</li>
+                    <li>Use the Site or Services to solicit employees, contractors, or customers of any business introduced through Summit Mergers, except in connection with a consummated transaction.</li>
+                </ul>
+
+                <h2 id="t9">9. Intellectual Property</h2>
+                <p>All content on this Site, including but not limited to text, graphics, logos, design elements, and the compilation thereof (collectively, "Site Content"), is the proprietary property of Summit Mergers and is protected by applicable intellectual property laws, including copyright and trademark law.</p>
+                <p>You are granted a limited, non-exclusive, non-transferable, revocable license to access and use the Site for your personal, non-commercial purposes in connection with evaluating Summit Mergers' Services. This license does not permit you to: (a) reproduce, distribute, or publicly display Site Content; (b) modify or create derivative works from Site Content; (c) use Site Content for any commercial purpose without our prior written consent; or (d) remove any proprietary notices from Site Content.</p>
+                <p>Any feedback, suggestions, or ideas you submit to Summit Mergers may be used by us without restriction or compensation to you.</p>
+
+                <h2 id="t10">10. No Guarantee of Transaction Outcome</h2>
+                <p>Summit Mergers does not represent, warrant, or guarantee that: (a) any specific buyer or seller will be identified or introduced; (b) any transaction will be completed, or if completed, will close on favorable terms; (c) any valuation, financial projection, or market assessment provided will prove accurate; or (d) any buyer introduced will be financially qualified or will complete due diligence in any particular timeframe.</p>
+                <p>Market conditions, buyer financing availability, regulatory approvals, due diligence findings, and numerous other factors outside Summit Mergers' control may affect the outcome of any transaction. Past transactions facilitated by Summit Mergers are not indicative of future results.</p>
+
+                <h2 id="t11">11. Disclaimer of Warranties</h2>
+                <p>THE SITE AND ALL CONTENT, SERVICES, AND INFORMATION PROVIDED BY SUMMIT MERGERS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, SUMMIT MERGERS EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+                <p>SUMMIT MERGERS DOES NOT WARRANT THAT: (A) THE SITE WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE; (B) ANY INFORMATION PROVIDED IS ACCURATE, COMPLETE, OR CURRENT; (C) THE SITE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS; OR (D) THE RESULTS OF USING THE SITE OR SERVICES WILL MEET YOUR REQUIREMENTS.</p>
+
+                <h2 id="t12">12. Limitation of Liability</h2>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SUMMIT MERGERS, ITS PRINCIPALS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF DATA, LOSS OF GOODWILL, OR BUSINESS INTERRUPTION, ARISING OUT OF OR RELATED TO YOUR USE OF, OR INABILITY TO USE, THE SITE OR SERVICES, EVEN IF SUMMIT MERGERS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SUMMIT MERGERS' TOTAL CUMULATIVE LIABILITY TO YOU FOR ANY AND ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS, THE SITE, OR THE SERVICES SHALL NOT EXCEED THE GREATER OF: (A) THE TOTAL FEES ACTUALLY PAID BY YOU TO SUMMIT MERGERS IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM; OR (B) ONE HUNDRED DOLLARS ($100.00).</p>
+                <p>Some jurisdictions do not allow the exclusion or limitation of certain types of damages. In such jurisdictions, our liability will be limited to the maximum extent permitted by law.</p>
+
+                <h2 id="t13">13. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless Summit Mergers and its principals, employees, agents, successors, and assigns from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to: (a) your use of the Site or Services; (b) your violation of these Terms; (c) any inaccurate or misleading information you provide to Summit Mergers; (d) your violation of any third-party rights, including intellectual property or confidentiality rights; or (e) your violation of any applicable law or regulation.</p>
+                <p>Summit Mergers reserves the right, at its own expense, to assume exclusive defense and control of any matter subject to indemnification by you, in which case you agree to cooperate with our defense of such claim.</p>
+
+                <h2 id="t14">14. Third-Party Links and Services</h2>
+                <p>The Site may contain links to third-party websites or services. These links are provided solely as a convenience. Summit Mergers does not endorse, control, or assume responsibility for the content, privacy practices, or availability of any third-party site or service. Your use of any third-party site is at your own risk and subject to that site's own terms and privacy policies.</p>
+
+                <h2 id="t15">15. Non-Solicitation</h2>
+                <p>For a period of two (2) years following your introduction to any business, buyer, or individual through Summit Mergers' Services, you agree not to directly or indirectly solicit, employ, engage, or retain such party's employees, contractors, or principals for any purpose unrelated to a transaction facilitated by Summit Mergers, without Summit Mergers' prior written consent.</p>
+                <p>Additionally, for a period of two (2) years following any introduction made by Summit Mergers, you agree not to circumvent Summit Mergers by engaging in discussions or transactions with any party introduced by Summit Mergers outside of the Summit Mergers process without Summit Mergers' written consent. Any such circumvention shall entitle Summit Mergers to its full success fee as if the transaction had been facilitated through Summit Mergers.</p>
+
+                <h2 id="t16">16. Governing Law and Dispute Resolution</h2>
+
+                <h3>Governing Law</h3>
+                <p>These Terms and any dispute arising out of or related to these Terms, the Site, or the Services shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions.</p>
+
+                <h3>Informal Resolution</h3>
+                <p>Before initiating any formal dispute resolution proceeding, you agree to contact Summit Mergers at <a href="mailto:daniel@summitmergers.com">daniel@summitmergers.com</a> and attempt to resolve the dispute informally. We will use reasonable good-faith efforts to resolve the dispute within thirty (30) days of receiving written notice.</p>
+
+                <h3>Arbitration</h3>
+                <p>If the parties are unable to resolve a dispute informally, any dispute, claim, or controversy arising out of or relating to these Terms or the Services shall be resolved by binding arbitration administered by the American Arbitration Association ("AAA") under its Commercial Arbitration Rules. The arbitration shall be conducted in New York, New York, or via remote means as mutually agreed. The arbitrator's decision shall be final and binding, and judgment on the award may be entered in any court of competent jurisdiction.</p>
+
+                <h3>Class Action Waiver</h3>
+                <p>YOU AND SUMMIT MERGERS AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE PROCEEDING.</p>
+
+                <h3>Exceptions</h3>
+                <p>Notwithstanding the foregoing, either party may seek emergency injunctive or other equitable relief from a court of competent jurisdiction in New York to prevent irreparable harm pending arbitration, without waiving the right to arbitrate the underlying claim.</p>
+
+                <h2 id="t17">17. Severability and Waiver</h2>
+                <p>If any provision of these Terms is found by a court or arbitrator of competent jurisdiction to be invalid, illegal, or unenforceable, such provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.</p>
+                <p>No waiver by Summit Mergers of any term or condition of these Terms shall be deemed a further or continuing waiver of such term or any other term, and any failure by Summit Mergers to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+                <h2 id="t18">18. Entire Agreement</h2>
+                <p>These Terms, together with our Privacy Policy and any executed Engagement Agreement or NDA, constitute the entire agreement between you and Summit Mergers with respect to the subject matter hereof and supersede all prior or contemporaneous agreements, representations, warranties, and understandings, whether written or oral, relating to such subject matter. In the event of a conflict between these Terms and an executed Engagement Agreement, the Engagement Agreement shall control.</p>
+
+                <h2 id="t19">19. Modifications to Terms</h2>
+                <p>Summit Mergers reserves the right to modify these Terms at any time in its sole discretion. When we make material changes, we will update the "Last Revised" date at the top of this page. Your continued use of the Site or Services after any such modification constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must discontinue use of the Site and Services.</p>
+
+                <h2 id="t20">20. Contact Information</h2>
+                <p>For questions, concerns, or notices regarding these Terms of Service, please contact us at:</p>
+                <p>
+                    <strong>Summit Mergers</strong><br>
+                    Email: <a href="mailto:daniel@summitmergers.com">daniel@summitmergers.com</a><br>
+                    Phone: (845) 402 6614
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <span class="logo" style="font-size: 1.1rem; display: block; margin-bottom: 1rem;">Summit Mergers</span>
+                    <p>Strategic M&A Intermediary for<br>Service-Based Enterprises.</p>
+                </div>
+                <div>
+                    <p style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #bbb; margin-bottom: 1rem;">Quick Links</p>
+                    <a href="opportunities.html" style="display: block; font-size: 0.85rem; color: var(--text-secondary); text-decoration: none; margin-bottom: 0.65rem;">Active Opportunities</a>
+                    <a href="deals.html" style="display: block; font-size: 0.85rem; color: var(--text-secondary); text-decoration: none;">View Our Past Deals →</a>
+                </div>
+                <div style="text-align: right;">
+                    <p style="line-height: 2; color: var(--text-secondary); font-size: 0.9rem;">
+                        <strong>Contact</strong><br>
+                        daniel@summitmergers.com<br>
+                        (845) 402 6614
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Summit Mergers. Confidentiality Guaranteed.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        (function() {
+            const header = document.querySelector('header');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            if (!menuBtn || !navLinks) return;
+            function closeMenu() {
+                header.classList.remove('nav-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            function openMenu() {
+                header.classList.add('nav-open');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+            menuBtn.addEventListener('click', () => {
+                header.classList.contains('nav-open') ? closeMenu() : openMenu();
+            });
+            navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+            window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+        })();
+    </script>
+</body>
+</html>
