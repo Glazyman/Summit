@@ -950,7 +950,7 @@
 
     <section class="deals-section">
         <div class="container">
-            <p class="deals-count">Showing <span id="deal-count">16</span> active listings</p>
+            <p class="deals-count">Showing <span id="deal-count"></span> active listings</p>
             <div class="deals-grid" id="deals-grid">
 
                 <!-- Bay Area Mechanical -->
@@ -2013,6 +2013,7 @@
         const filterBtns = document.querySelectorAll('.filter-btn');
         const cards = document.querySelectorAll('.deal-card');
         const countEl = document.getElementById('deal-count');
+        countEl.textContent = cards.length;
         const noResults = document.getElementById('no-results');
         const resetBtn = document.getElementById('filter-reset');
 
