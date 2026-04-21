@@ -597,9 +597,134 @@
             .form-grid { grid-template-columns: 1fr; }
             .form-container { padding: 2rem; }
         }
+        /* Password Gate */
+        #pw-gate {
+            position: fixed;
+            inset: 0;
+            background: #ffffff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .pw-box {
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .pw-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 2.5rem;
+            display: block;
+        }
+
+        .pw-box h2 {
+            font-size: clamp(1.6rem, 4vw, 2rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .pw-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .pw-contact-note {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .pw-contact-note a {
+            color: var(--text-primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-primary);
+        }
+
+        .pw-input-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .pw-input-row input {
+            flex: 1;
+            padding: 0.85rem 1.1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .pw-input-row input:focus {
+            border-color: var(--text-primary);
+        }
+
+        .pw-input-row input.pw-error {
+            border-color: #c0392b;
+        }
+
+        .pw-input-row button {
+            padding: 0.85rem 1.5rem;
+            background: var(--text-primary);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            transition: opacity 0.2s;
+        }
+
+        .pw-input-row button:hover {
+            opacity: 0.8;
+        }
+
+        .pw-error-msg {
+            font-size: 0.82rem;
+            color: #c0392b;
+            min-height: 1.2em;
+            margin-top: 0.25rem;
+        }
+
+        .pw-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 2rem 0;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Password Gate -->
+    <div id="pw-gate">
+        <div class="pw-box">
+            <span class="pw-logo">Summit Mergers</span>
+            <h2>Past Deals</h2>
+            <p>This section is restricted to verified parties.</p>
+            <p class="pw-contact-note">Don't have a code? <a href="index.html#contact">Contact us to request access →</a></p>
+            <div class="pw-input-row">
+                <input type="password" id="pw-input" placeholder="Enter access code" autocomplete="off" />
+                <button onclick="checkPassword()">Enter</button>
+            </div>
+            <div class="pw-error-msg" id="pw-error"></div>
+        </div>
+    </div>
 
     <header>
         <div class="container">
@@ -1197,6 +1322,34 @@
                 if (window.innerWidth > 768) closeMenu();
             });
         }
+
+        function checkPassword() {
+            const input = document.getElementById('pw-input');
+            const errorEl = document.getElementById('pw-error');
+            if (input.value === 'Summit') {
+                sessionStorage.setItem('sm_deals_auth', '1');
+                document.getElementById('pw-gate').style.display = 'none';
+                document.body.style.overflow = '';
+                input.classList.remove('pw-error');
+                errorEl.textContent = '';
+            } else {
+                input.classList.add('pw-error');
+                errorEl.textContent = 'Incorrect code. Please contact us to request access.';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const gate = document.getElementById('pw-gate');
+            const input = document.getElementById('pw-input');
+            if (sessionStorage.getItem('sm_deals_auth') === '1') {
+                gate.style.display = 'none';
+            } else {
+                document.body.style.overflow = 'hidden';
+            }
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') checkPassword();
+            });
+        });
 
         window.onload = function () {
             init();
