@@ -274,7 +274,7 @@ header.nav-open .mobile-menu-btn span:nth-child(3) { transform: translateY(-6.5p
     border-bottom: none;
     background: #0a0a08;
     /* photo lives on ::before so grayscale doesn't hit the content */
-    margin-top: -76px; /* overlap the sticky nav so photo goes edge-to-edge */
+    /* no negative margin — let sticky nav sit cleanly above */
 }
 
 /* B&W photo layer — grayscale filter only hits this pseudo-element */

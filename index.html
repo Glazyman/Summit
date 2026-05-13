@@ -559,10 +559,12 @@
             const darkTop = document.getElementById('hero') || document.querySelector('.page-hero-dark');
             if (!darkTop) return;
             function update() {
-                header.classList.toggle('hero-top', window.scrollY < 30);
+                const bottom = darkTop.getBoundingClientRect().bottom;
+                header.classList.toggle('hero-top', bottom > header.offsetHeight);
             }
             update();
             window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update, { passive: true });
         }
 
         function setupScrollReveal() {
