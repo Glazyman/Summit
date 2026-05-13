@@ -209,7 +209,7 @@
         <!-- ══════════════════════════════════════
              5. CTA Strip
              ══════════════════════════════════════ -->
-        <div class="cta-strip">
+        <div class="cta-strip" id="contact">
             <div class="container">
                 <h2 class="reveal">Start with a Confidential Conversation.</h2>
                 <p class="reveal reveal-delay-1">No commitment. No pressure. Just an honest look at what your business could be worth and what the path to a premium exit looks like.</p>
@@ -312,11 +312,28 @@
             window.addEventListener('resize', update, { passive: true });
         }
 
+        function setupContactNav() {
+            const link = document.querySelector('.nav-links a[href$="#contact"], .nav-links a[href="index.html#contact"]');
+            if (!link) return;
+            link.addEventListener('click', function(e) {
+                const section = document.getElementById('contact');
+                if (section) {
+                    e.preventDefault();
+                    const offset = document.querySelector('header')?.offsetHeight || 76;
+                    window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' });
+                } else {
+                    e.preventDefault();
+                    window.location.href = 'index.html#contact';
+                }
+            });
+        }
+
         window.onload = function () {
             document.getElementById('year').innerText = new Date().getFullYear();
             setupMobileNav();
             setupScrollReveal();
             setupNavTransparency();
+            setupContactNav();
         };
     </script>
 

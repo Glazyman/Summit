@@ -1242,6 +1242,23 @@
             }
         });
 
+        // Smart contact nav scroll
+        (function() {
+            const link = document.querySelector('.nav-links a[href$="#contact"], .nav-links a[href="index.html#contact"]');
+            if (!link) return;
+            link.addEventListener('click', function(e) {
+                const section = document.getElementById('contact');
+                if (section) {
+                    e.preventDefault();
+                    const offset = document.querySelector('header')?.offsetHeight || 76;
+                    window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' });
+                } else {
+                    e.preventDefault();
+                    window.location.href = 'index.html#contact';
+                }
+            });
+        })();
+
         // Transparent nav over dark hero
         (function () {
             const header = document.querySelector('header');

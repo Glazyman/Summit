@@ -580,12 +580,29 @@
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         }
 
+        function setupContactNav() {
+            const link = document.querySelector('.nav-links a[href$="#contact"], .nav-links a[href="index.html#contact"]');
+            if (!link) return;
+            link.addEventListener('click', function(e) {
+                const section = document.getElementById('contact');
+                if (section) {
+                    e.preventDefault();
+                    const offset = document.querySelector('header')?.offsetHeight || 76;
+                    window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' });
+                } else {
+                    e.preventDefault();
+                    window.location.href = 'index.html#contact';
+                }
+            });
+        }
+
         window.onload = function () {
             init();
             setupMobileNav();
             prefillFromUrl();
             setupScrollReveal();
             setupNavTransparency();
+            setupContactNav();
         };
     </script>
 </body>
