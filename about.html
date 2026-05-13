@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About | Summit Mergers</title>
+    <meta name="description" content="Summit Mergers is a boutique M&A advisory firm representing owners of $2M–$50M service businesses through discreet, well-orchestrated exits.">
+    <link rel="icon" type="image/png" href="smfavicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About | Summit Mergers">
+    <meta property="og:description" content="Summit Mergers is a boutique M&A advisory firm representing owners of $2M–$50M service businesses through discreet, well-orchestrated exits.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── About-page-specific overrides ─────────── */
+
+        /* Override about-grid column ratio per spec */
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .about-story-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+        }
+
+        /* Who we represent — sector/buyer columns */
+        .represent-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            margin-top: 3.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .represent-cols { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+
+        .represent-cols h3 {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Center-constrained paragraph in "Who we represent" */
+        .represent-lead {
+            max-width: 640px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-top: 1.25rem;
+        }
+
+        /* Tag grid — reuse existing .tag-grid / .tag but ensure margin-top is tighter here */
+        .represent-cols .tag-grid {
+            margin-top: 1.5rem;
+        }
+
+        /* Muted background for philosophy section */
+        .bg-muted {
+            background: var(--bg);
+        }
+
+        /* White background sections */
+        .bg-white {
+            background: var(--bg-white);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Summit Mergers</a>
+                <button type="button" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" id="mobile-menu-btn">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-links" id="nav-links">
+                    <a href="founders.html">Founders</a>
+                    <a href="investors.html">Investors</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="opportunities.html">Opportunities</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══════════════════════════════════════
+             1. Dark Hero
+             ══════════════════════════════════════ -->
+        <div class="page-hero-dark">
+            <div class="container">
+                <span class="kicker reveal">About Summit Mergers</span>
+                <h1 class="reveal reveal-delay-1">Quiet. Precise.<br>Outcome-Driven.</h1>
+                <p class="reveal reveal-delay-2">A boutique M&amp;A advisory firm founded on one belief: business owners deserve the same sophisticated representation that institutional buyers bring to the table.</p>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════
+             2. Mission / Story
+             ══════════════════════════════════════ -->
+        <section class="bg-white">
+            <div class="container">
+                <span class="kicker reveal">Our story</span>
+                <h2 class="reveal reveal-delay-1">Why We Exist.</h2>
+                <div class="about-story-grid" style="margin-top: 3rem;">
+                    <!-- Left: text -->
+                    <div class="reveal reveal-delay-2">
+                        <p style="color: var(--text-primary); font-size: 1.05rem; font-weight: 400; line-height: 1.85; margin-bottom: 1.5rem;">Most owners of successful service businesses have spent a decade or more building something real. When it's time to sell, they deserve an advisor who understands that — not just the numbers, but the team, the culture, and what comes after.</p>
+                        <p style="color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem;">Summit Mergers was built for that moment. We represent owners through the most significant financial decision of their lives — with the discretion of a trusted advisor, the discipline of a structured process, and the market knowledge that comes from working both sides of the table.</p>
+                        <p style="color: var(--text-secondary); line-height: 1.85;">We work exclusively on behalf of sellers. That's not a detail — it's the foundation of everything we do.</p>
+                    </div>
+                    <!-- Right: stats -->
+                    <div class="stats-list reveal reveal-delay-3">
+                        <div class="stat-item">
+                            <span class="stat-val">24h</span>
+                            <span class="stat-label">Response Time</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val">100%</span>
+                            <span class="stat-label">Confidential Process</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val">Zero</span>
+                            <span class="stat-label">Seller Fees</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val">3–6mo</span>
+                            <span class="stat-label">Avg. Close Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             3. Philosophy
+             ══════════════════════════════════════ -->
+        <section class="bg-muted">
+            <div class="container">
+                <span class="kicker reveal">How we operate</span>
+                <h2 class="reveal reveal-delay-1">Three Things We Never Compromise On.</h2>
+                <div class="feature-list">
+                    <div class="feature-item reveal reveal-delay-1">
+                        <span class="feature-num">01</span>
+                        <h3>Discretion</h3>
+                        <p>Your employees, customers, and competitors should never know a transaction is underway until you're ready to tell them. We treat confidentiality not as a service feature but as a professional obligation.</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-2">
+                        <span class="feature-num">02</span>
+                        <h3>Alignment</h3>
+                        <p>We operate on a success-fee basis, paid by the acquirer upon closing. You pay nothing, ever. Our incentive is not to close any deal — it's to close the right deal at the best possible price.</p>
+                    </div>
+                    <div class="feature-item reveal reveal-delay-3">
+                        <span class="feature-num">03</span>
+                        <h3>Preparation</h3>
+                        <p>The owners who achieve the best outcomes almost always started the conversation early. We help you understand your business's true market value and build toward a premium exit — whether that's six months or three years away.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             4. Who We Represent
+             ══════════════════════════════════════ -->
+        <section class="bg-white">
+            <div class="container">
+                <span class="kicker reveal">Our focus</span>
+                <h2 class="reveal reveal-delay-1">We Represent One Side of Every Deal.</h2>
+                <p class="represent-lead reveal reveal-delay-2">We work exclusively with sellers — owners of profitable, established service businesses with annual revenues between $2M and $50M. We do not represent buyers. That focus is what allows us to be genuinely, unconditionally on your side.</p>
+
+                <div class="represent-cols">
+                    <!-- Sectors -->
+                    <div class="reveal reveal-delay-2">
+                        <h3>Sectors we know well</h3>
+                        <div class="tag-grid">
+                            <span class="tag">HVAC &amp; Mechanical</span>
+                            <span class="tag">Access Control &amp; Security</span>
+                            <span class="tag">Commercial Fencing</span>
+                            <span class="tag">Professional Services</span>
+                            <span class="tag">Healthcare Services</span>
+                            <span class="tag">Technology</span>
+                            <span class="tag">Manufacturing</span>
+                        </div>
+                    </div>
+                    <!-- Buyers -->
+                    <div class="reveal reveal-delay-3">
+                        <h3>Buyers we work with</h3>
+                        <div class="tag-grid">
+                            <span class="tag">Private Equity</span>
+                            <span class="tag">Family Offices</span>
+                            <span class="tag">Strategic Acquirers</span>
+                            <span class="tag">Search Funds</span>
+                            <span class="tag">Independent Sponsors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             5. CTA Strip
+             ══════════════════════════════════════ -->
+        <div class="cta-strip">
+            <div class="container">
+                <h2 class="reveal">Start with a Confidential Conversation.</h2>
+                <p class="reveal reveal-delay-1">No commitment. No pressure. Just an honest look at what your business could be worth and what the path to a premium exit looks like.</p>
+                <a href="index.html#contact" class="btn btn-primary reveal reveal-delay-2">Get a Confidential Assessment</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <span class="logo" style="font-size: 1.1rem; display: block; margin-bottom: 1rem;">Summit Mergers</span>
+                    <p>Strategic M&amp;A Intermediary for <br>Service-Based Enterprises.</p>
+                </div>
+                <div>
+                    <p style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #bbb; margin-bottom: 1rem;">Quick Links</p>
+                    <a href="opportunities.html" style="display: block; font-size: 0.85rem; text-decoration: none; margin-bottom: 0.65rem; transition: color 0.2s;">Active Opportunities</a>
+                    <a href="deals.html" style="display: block; font-size: 0.85rem; text-decoration: none; transition: color 0.2s;">View Our Past Deals &rarr;</a>
+                </div>
+                <div style="text-align: right;">
+                    <p style="line-height: 2;">
+                        <strong style="color: rgba(247,245,242,0.6); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">Contact</strong><br>
+                        <a href="mailto:daniel@summitmergers.com">daniel@summitmergers.com</a><br>
+                        <a href="tel:+18454026614">(845) 402 6614</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Summit Mergers. Confidentiality Guaranteed.</p>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setupMobileNav() {
+            const header = document.querySelector('header');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navLinks = document.getElementById('nav-links');
+            if (!menuBtn || !navLinks) return;
+
+            function closeMenu() {
+                header.classList.remove('nav-open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Open menu');
+                document.body.style.overflow = '';
+            }
+            function openMenu() {
+                header.classList.add('nav-open');
+                menuBtn.setAttribute('aria-expanded', 'true');
+                menuBtn.setAttribute('aria-label', 'Close menu');
+                document.body.style.overflow = 'hidden';
+            }
+
+            menuBtn.addEventListener('click', () => {
+                if (header.classList.contains('nav-open')) closeMenu();
+                else openMenu();
+            });
+
+            navLinks.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', closeMenu);
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) closeMenu();
+            });
+        }
+
+        function setupScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        window.onload = function () {
+            document.getElementById('year').innerText = new Date().getFullYear();
+            setupMobileNav();
+            setupScrollReveal();
+        };
+    </script>
+
+</body>
+</html>
