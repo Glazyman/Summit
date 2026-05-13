@@ -56,8 +56,10 @@
         }
 
         header {
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             background: rgba(255,255,255,0.9);
             backdrop-filter: blur(12px);
             z-index: 1000;
@@ -125,7 +127,7 @@
         header.nav-open .mobile-menu-btn span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
         .page-hero {
-            padding: 80px 0 70px;
+            padding: 156px 0 70px;
             background: linear-gradient(to bottom, #fff, #fafafa);
             border-bottom: 1px solid var(--border);
         }
@@ -297,7 +299,7 @@
             header.nav-open .nav-links { display: flex; }
             .nav-links a { font-size: 1rem; }
             .container { padding: 0 1.25rem; }
-            .page-hero { padding: 56px 0 48px; }
+            .page-hero { padding: 136px 0 48px; }
             .legal-body { padding: 48px 0 70px; }
             .footer-top { flex-direction: column; gap: 1.5rem; }
             .footer-bottom { flex-direction: column; text-align: center; }
