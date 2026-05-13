@@ -1855,8 +1855,15 @@ footer .logo { color: #F7F5F2; }
     .nav-links a:last-child:hover { color: var(--text-primary); }
 
     /* ── Layout ─── */
-    section { padding: 64px 0; }
+    section { padding: 56px 0; }
     .container { padding: 0 1.25rem; }
+
+    /* ── Dark blocks / CTA strips (not <section>) ─── */
+    .fee-callout   { padding: 64px 0; }
+    .cta-strip     { padding: 64px 0; }
+    .stats-banner  { padding: 56px 0; }
+    .inquiry-section { padding: 56px 0; }
+    .page-hero-dark { padding: 110px 0 72px; }
 
     /* ── Hero ─── */
     #hero {
@@ -2032,6 +2039,7 @@ footer .logo { color: #F7F5F2; }
     /* ── Footer ─── */
     footer { padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)); }
     .footer-top { flex-direction: column; gap: 2rem; }
+    .footer-top > div { text-align: left !important; }
     .footer-bottom { flex-direction: column; text-align: center; gap: 0.75rem; }
 
     /* ── Deals hero ─── */
@@ -2048,9 +2056,11 @@ footer .logo { color: #F7F5F2; }
     h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
     .container { padding: 0 1rem; }
 
-    section { padding: 56px 0; }
+    section { padding: 48px 0; }
 
     .card, .step { padding: 2rem 1.5rem; }
+    .concern-card { padding: 1.75rem 1.5rem; }
+    .feature-item { padding: 2rem 1.75rem; }
 
     .card-metrics { gap: 0.8rem 1rem; }
     .metric-value { font-size: 0.85rem; }
@@ -2059,6 +2069,11 @@ footer .logo { color: #F7F5F2; }
 
     .stat-val { font-size: 1.9rem; }
 
-    .fee-callout { padding: 72px 0; }
+    .fee-callout  { padding: 52px 0; }
+    .cta-strip    { padding: 52px 0; }
     .fee-callout p { font-size: 0.95rem; }
+
+    .form-group { margin-bottom: 1.5rem; }
+
+    .page-hero-dark { padding: 100px 0 56px; }
 }
