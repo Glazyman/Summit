@@ -224,11 +224,11 @@
             main.innerHTML += `
                 <section id="services">
                     <div class="container">
-                        <span class="kicker">${CONTENT.services.subheading}</span>
-                        <h2>${CONTENT.services.heading}</h2>
+                        <span class="kicker reveal">${CONTENT.services.subheading}</span>
+                        <h2 class="reveal reveal-delay-1">${CONTENT.services.heading}</h2>
                         <div class="grid">
-                            ${CONTENT.services.items.map(item => `
-                                <div class="card">
+                            ${CONTENT.services.items.map((item, i) => `
+                                <div class="card reveal reveal-delay-${i + 1}">
                                     <h3>${item.title}</h3>
                                     <p>${item.desc}</p>
                                 </div>
@@ -252,11 +252,11 @@
             main.innerHTML += `
                 <section id="process">
                     <div class="container">
-                        <span class="kicker">${CONTENT.process.subheading}</span>
-                        <h2>${CONTENT.process.heading}</h2>
+                        <span class="kicker reveal">${CONTENT.process.subheading}</span>
+                        <h2 class="reveal reveal-delay-1">${CONTENT.process.heading}</h2>
                         <div class="steps">
-                            ${CONTENT.process.steps.map(step => `
-                                <div class="step">
+                            ${CONTENT.process.steps.map((step, i) => `
+                                <div class="step reveal reveal-delay-${i + 1}">
                                     <div class="step-header">
                                         <span class="step-num">${step.num}</span>
                                     </div>
@@ -274,13 +274,13 @@
                 <section id="about">
                     <div class="container">
                         <div class="about-grid">
-                            <div>
+                            <div class="reveal">
                                 <span class="kicker">Corporate Identity</span>
                                 <h2>${CONTENT.about.heading}</h2>
                                 <p>${CONTENT.about.p1}</p>
                                 <p>${CONTENT.about.p2}</p>
                             </div>
-                            <div class="stats-list">
+                            <div class="stats-list reveal reveal-delay-2">
                                 ${CONTENT.about.stats.map(stat => `
                                     <div class="stat-item">
                                         <span class="stat-val">${stat.val}</span>
@@ -297,11 +297,11 @@
             main.innerHTML += `
                 <section id="testimonials" style="background: var(--muted);">
                     <div class="container testimonials-container" style="text-align: center;">
-                        <span class="kicker">${CONTENT.testimonials.subheading}</span>
-                        <h2>${CONTENT.testimonials.heading}</h2>
+                        <span class="kicker reveal">${CONTENT.testimonials.subheading}</span>
+                        <h2 class="reveal reveal-delay-1">${CONTENT.testimonials.heading}</h2>
                         <div class="testimonial-grid">
-                            ${CONTENT.testimonials.items.map(item => `
-                                <div class="testimonial-card">
+                            ${CONTENT.testimonials.items.map((item, i) => `
+                                <div class="testimonial-card reveal reveal-delay-${i + 1}">
                                     <p class="testimonial-quote">"${item.quote}"</p>
                                     <div>
                                         <div class="testimonial-author">${item.author}</div>
@@ -319,9 +319,9 @@
             main.innerHTML += `
                 <section id="faqs">
                     <div class="container" style="text-align: center;">
-                        <span class="kicker">${CONTENT.faqs.subheading}</span>
-                        <h2>${CONTENT.faqs.heading}</h2>
-                        <div class="faq-container">
+                        <span class="kicker reveal">${CONTENT.faqs.subheading}</span>
+                        <h2 class="reveal reveal-delay-1">${CONTENT.faqs.heading}</h2>
+                        <div class="faq-container reveal reveal-delay-2">
                             ${CONTENT.faqs.items.map((item, index) => `
                                 <div class="faq-item" data-faq="${index}">
                                     <div class="faq-question">
@@ -554,10 +554,24 @@
             }
         }
 
+        function setupScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
         window.onload = function () {
             init();
             setupMobileNav();
             prefillFromUrl();
+            setupScrollReveal();
         };
     </script>
 </body>
