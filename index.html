@@ -554,6 +554,22 @@
             }
         }
 
+        function setupNavTransparency() {
+            const header = document.querySelector('header');
+            if (!document.getElementById('hero')) return;
+
+            function update() {
+                if (window.scrollY < 30) {
+                    header.classList.add('hero-top');
+                } else {
+                    header.classList.remove('hero-top');
+                }
+            }
+
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+        }
+
         function setupScrollReveal() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -572,6 +588,7 @@
             setupMobileNav();
             prefillFromUrl();
             setupScrollReveal();
+            setupNavTransparency();
         };
     </script>
 </body>
