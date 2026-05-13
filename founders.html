@@ -385,11 +385,21 @@
         document.getElementById('year').innerText = new Date().getFullYear();
 
         // ── Init ─────────────────────────────────────
+        function setupNavTransparency() {
+            const header = document.querySelector('header');
+            const darkTop = document.querySelector('.page-hero-dark');
+            if (!darkTop) return;
+            function update() { header.classList.toggle('hero-top', window.scrollY < 30); }
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+        }
+
         window.addEventListener('load', () => {
             setupMobileNav();
             setupScrollReveal();
             setupFAQ();
             setupSmoothScroll();
+            setupNavTransparency();
         });
     </script>
 </body>

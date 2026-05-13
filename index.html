@@ -556,16 +556,11 @@
 
         function setupNavTransparency() {
             const header = document.querySelector('header');
-            if (!document.getElementById('hero')) return;
-
+            const darkTop = document.getElementById('hero') || document.querySelector('.page-hero-dark');
+            if (!darkTop) return;
             function update() {
-                if (window.scrollY < 30) {
-                    header.classList.add('hero-top');
-                } else {
-                    header.classList.remove('hero-top');
-                }
+                header.classList.toggle('hero-top', window.scrollY < 30);
             }
-
             update();
             window.addEventListener('scroll', update, { passive: true });
         }

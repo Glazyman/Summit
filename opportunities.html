@@ -34,12 +34,12 @@
         </div>
     </header>
 
-    <div class="page-hero">
+    <div class="page-hero-dark" style="background-image:url('https://images.unsplash.com/photo-1560472355-109703aa3edc?auto=format&fit=crop&w=1920&q=80');text-align:center;">
         <div class="container">
             <span class="kicker">Active Listings</span>
-            <h1>Current Opportunities</h1>
-            <p>Established, profitable businesses with owners actively seeking qualified buyers. All opportunities have been evaluated and are under active representation.</p>
-            <div class="disclaimer-banner">
+            <h1 style="margin:0 auto;">Current Opportunities</h1>
+            <p style="margin:1.5rem auto 0;max-width:600px;">Established, profitable businesses with owners actively seeking qualified buyers. All opportunities have been evaluated and are under active representation.</p>
+            <div class="disclaimer-banner" style="margin:2rem auto 0;background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:rgba(247,245,242,0.6);">
                 All information is strictly confidential. Inquiries require execution of an NDA prior to disclosure of additional details.
             </div>
         </div>
@@ -1241,6 +1241,16 @@
                 filtersToggle.setAttribute('aria-expanded', 'false');
             }
         });
+
+        // Transparent nav over dark hero
+        (function () {
+            const header = document.querySelector('header');
+            const darkTop = document.querySelector('.page-hero-dark');
+            if (!darkTop) return;
+            function update() { header.classList.toggle('hero-top', window.scrollY < 30); }
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+        })();
     </script>
 </body>
 </html>
