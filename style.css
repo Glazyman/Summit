@@ -739,19 +739,23 @@ header.nav-open .mobile-menu-btn span:nth-child(3) { transform: translateY(-6.5p
 .fee-callout {
     background: var(--bg-dark);
     color: #F7F5F2;
-    padding: 110px 0;
+    padding: 72px 0;
     text-align: center;
     border-bottom: none;
 }
 
-.fee-callout h2 { color: #F7F5F2; margin-bottom: 1.25rem; }
+.fee-callout h2 {
+    color: #F7F5F2;
+    margin-bottom: 0.65rem;
+    font-size: clamp(1.6rem, 4.2vw, 2rem);
+}
 
 .fee-callout p {
     color: rgba(247,245,242,0.55);
-    max-width: 580px;
+    max-width: 520px;
     margin: 0 auto;
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 0.95rem;
+    line-height: 1.55;
 }
 
 /* ── Process Steps ─────────────────────────── */
@@ -1861,7 +1865,7 @@ footer .logo { color: #F7F5F2; }
     .container { padding: 0 1.25rem; }
 
     /* ── Dark blocks / CTA strips (not <section>) ─── */
-    .fee-callout   { padding: 64px 0; }
+    .fee-callout   { padding: 44px 0; }
     .cta-strip     { padding: 64px 0; }
     .stats-banner  { padding: 56px 0; }
     .inquiry-section { padding: 56px 0; }
@@ -2071,9 +2075,9 @@ footer .logo { color: #F7F5F2; }
 
     .stat-val { font-size: 1.9rem; }
 
-    .fee-callout  { padding: 52px 0; }
+    .fee-callout  { padding: 38px 0; }
     .cta-strip    { padding: 52px 0; }
-    .fee-callout p { font-size: 0.95rem; }
+    .fee-callout p { font-size: 0.9rem; line-height: 1.52; }
 
     .form-group { margin-bottom: 1.5rem; }
 
