@@ -1058,7 +1058,7 @@
                 <div style="text-align: right;">
                     <p style="line-height: 2; color: var(--text-secondary); font-size: 0.9rem;">
                         <strong>Contact</strong><br>
-                        daniel@summitmergers.com<br>
+                        info@summitmergers.com<br>
                         (845) 402 6614
                     </p>
                 </div>
@@ -1126,13 +1126,13 @@
                     buyerSuccess.style.display = 'block';
                 } else {
                     const data = await response.json().catch(() => null);
-                    const msg = data && data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please email us directly at daniel@summitmergers.com';
+                    const msg = data && data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please email us directly at info@summitmergers.com';
                     alert(msg);
                     buyerSubmitBtn.disabled = false;
                     buyerSubmitBtn.textContent = 'Submit Inquiry';
                 }
             } catch {
-                alert('Network error. Please try again or email daniel@summitmergers.com');
+                alert('Network error. Please try again or email info@summitmergers.com');
                 buyerSubmitBtn.disabled = false;
                 buyerSubmitBtn.textContent = 'Submit Inquiry';
             }

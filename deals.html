@@ -177,7 +177,7 @@
                     <a href="opportunities.html" style="display: block; font-size: 0.85rem; color: var(--text-secondary); text-decoration: none; transition: color 0.2s;">Active Opportunities →</a>
                 </div>
                 <div style="text-align: right;">
-                    <p style="line-height: 2;"><strong>Contact</strong><br>daniel@summitmergers.com<br>(845) 402 6614</p>
+                    <p style="line-height: 2;"><strong>Contact</strong><br>info@summitmergers.com<br>(845) 402 6614</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -583,13 +583,13 @@
                         successBox.style.display = 'block';
                     } else {
                         const data = await response.json().catch(() => null);
-                        const errorMsg = data && data.errors ? data.errors.map(e => e.message).join(', ') : 'There was a problem sending your message. Please try again or email us directly at daniel@summitmergers.com';
+                        const errorMsg = data && data.errors ? data.errors.map(e => e.message).join(', ') : 'There was a problem sending your message. Please try again or email us directly at info@summitmergers.com';
                         alert(errorMsg);
                         submitBtn.disabled = false;
                         submitBtn.textContent = 'Submit Inquiry';
                     }
                 } catch (error) {
-                    alert('There was a network problem. Please try again or email us directly at daniel@summitmergers.com');
+                    alert('There was a network problem. Please try again or email us directly at info@summitmergers.com');
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Submit Inquiry';
                 }

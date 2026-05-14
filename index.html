@@ -97,8 +97,8 @@
                 ]
             },
             fees: {
-                headline: "Zero Fees. Full Alignment.",
-                body: "We operate on a success-fee basis, paid exclusively by the acquirer upon closing. You pay nothing, ever. Our incentive isn’t just to close a deal. It’s to close the right deal at the highest price, because that’s the only way we earn.",
+                headline: "Zero Seller Fees. Full Alignment.",
+                body: "Owners never receive an invoice from us—no retainers, no hourly bills. Compensation is success-based at closing under arrangements typical of private-market M&A, so advisory work isn’t an out-of-pocket cost while you evaluate options. Everyone benefits from that structure: orderly diligence for serious acquirers, transparent expectations, and a deal you’ll stand behind at the strongest defensible valuation.",
             },
             process: {
                 heading: "How It Works",
@@ -185,7 +185,7 @@
                     },
                     {
                         q: "Do I pay any fees as the seller?",
-                        a: "No. We operate on a success-fee basis paid exclusively by the acquirer upon closing. You pay nothing, ever. And because our fee is tied to your exit price, our interests are fully aligned: the higher your number, the better we do."
+                        a: "No. We operate on a success-fee basis paid exclusively by the acquirer upon closing. You pay nothing, ever."
                     }
                 ]
             },
@@ -193,7 +193,7 @@
                 heading: "Initial Inquiry",
                 subheading: "Professional & Confidential",
                 body: "Please provide high-level details for a preliminary assessment. All submissions are handled with strict confidentiality.",
-                email: "daniel@summitmergers.com",
+                email: "info@summitmergers.com",
                 phone: "(845) 402 6614"
             }
         };
@@ -437,13 +437,13 @@
                         successBox.style.display = 'block';
                     } else {
                         const data = await response.json().catch(() => null);
-                        const errorMsg = data && data.errors ? data.errors.map(e => e.message).join(', ') : 'There was a problem sending your message. Please try again or email us directly at daniel@summitmergers.com';
+                        const errorMsg = data && data.errors ? data.errors.map(e => e.message).join(', ') : 'There was a problem sending your message. Please try again or email us directly at info@summitmergers.com';
                         alert(errorMsg);
                         submitBtn.disabled = false;
                         submitBtn.textContent = 'Submit Inquiry';
                     }
                 } catch (error) {
-                    alert('There was a network problem. Please try again or email us directly at daniel@summitmergers.com');
+                    alert('There was a network problem. Please try again or email us directly at info@summitmergers.com');
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Submit Inquiry';
                 }

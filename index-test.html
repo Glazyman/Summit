@@ -1344,7 +1344,7 @@
                     <div class="contact-details fade-up fade-up-d3">
                         <div class="contact-detail">
                             <span class="label">Direct Email</span>
-                            <span class="value">daniel@summitmergers.com</span>
+                            <span class="value">info@summitmergers.com</span>
                         </div>
                         <div class="contact-detail">
                             <span class="label">Direct Line</span>
@@ -1435,7 +1435,7 @@
                 </div>
                 <div class="footer-col">
                     <div class="footer-col-title">Contact</div>
-                    <a href="mailto:daniel@summitmergers.com">daniel@summitmergers.com</a>
+                    <a href="mailto:info@summitmergers.com">info@summitmergers.com</a>
                     <a href="tel:8454026614">(845) 402-6614</a>
                     <a href="#contact">Submit an Inquiry</a>
                 </div>
@@ -1549,13 +1549,13 @@
                     successBox.style.display = 'block';
                 } else {
                     const data = await res.json().catch(() => null);
-                    const msg = data?.errors?.map(e => e.message).join(', ') || 'There was a problem. Please email daniel@summitmergers.com directly.';
+                    const msg = data?.errors?.map(e => e.message).join(', ') || 'There was a problem. Please email info@summitmergers.com directly.';
                     alert(msg);
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Submit Inquiry →';
                 }
             } catch {
-                alert('Network error. Please email daniel@summitmergers.com directly.');
+                alert('Network error. Please email info@summitmergers.com directly.');
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Submit Inquiry →';
             }

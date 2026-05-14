@@ -215,7 +215,7 @@
                 <div id="investor-success" class="success-msg" style="display:none;">
                     <span class="kicker">Criteria Received</span>
                     <h3>Thank you for registering.</h3>
-                    <p>We'll reach out when we have a deal that matches your mandate. In the meantime, feel free to email us directly at <a href="mailto:daniel@summitmergers.com" style="color: var(--text-primary);">daniel@summitmergers.com</a>.</p>
+                    <p>We'll reach out when we have a deal that matches your mandate. In the meantime, feel free to email us directly at <a href="mailto:info@summitmergers.com" style="color: var(--text-primary);">info@summitmergers.com</a>.</p>
                 </div>
             </div>
         </div>
@@ -236,7 +236,7 @@
                 <div style="text-align: right;">
                     <p style="color: rgba(247,245,242,0.45); font-size: 0.86rem; line-height: 2;">
                         <strong style="color: rgba(247,245,242,0.65);">Contact</strong><br>
-                        <a href="mailto:daniel@summitmergers.com">daniel@summitmergers.com</a><br>
+                        <a href="mailto:info@summitmergers.com">info@summitmergers.com</a><br>
                         <a href="tel:+18454026614">(845) 402 6614</a>
                     </p>
                 </div>
@@ -341,13 +341,13 @@
                         const data = await response.json().catch(() => null);
                         const msg  = data && data.errors
                             ? data.errors.map(err => err.message).join(', ')
-                            : 'There was a problem sending your message. Please try again or email us directly at daniel@summitmergers.com';
+                            : 'There was a problem sending your message. Please try again or email us directly at info@summitmergers.com';
                         alert(msg);
                         submitBtn.disabled    = false;
                         submitBtn.textContent = 'Submit Criteria';
                     }
                 } catch (_) {
-                    alert('There was a network problem. Please try again or email us at daniel@summitmergers.com');
+                    alert('There was a network problem. Please try again or email us at info@summitmergers.com');
                     submitBtn.disabled    = false;
                     submitBtn.textContent = 'Submit Criteria';
                 }
