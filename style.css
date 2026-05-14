@@ -141,6 +141,8 @@ header.hero-top.nav-open::before {
 }
 header.hero-top.nav-open .logo { color: var(--text-primary); }
 header.hero-top.nav-open .mobile-menu-btn span { background: var(--text-primary); }
+header.hero-top.nav-open .nav-links a { color: var(--text-primary); }
+header.hero-top.nav-open .nav-links a:last-child { color: var(--text-secondary); }
 
 header.hero-top .nav-links a:last-child {
     border-color: rgba(247,245,242,0.3);
