@@ -3,3 +3,4 @@
 2026-11-11 ProfessionalService + FAQPage (8 Q&As) JSON-LD — /
 2026-11-11 Canonical + og:url on all public pages; index-test.html set noindex
 2026-11-11 sitemap.xml: added about/terms/privacy, refreshed lastmod; added /llms.txt
+2026-11-11 Seller form revenue ranges changed to $2M–$50M to match site copy — /, /deals.html
