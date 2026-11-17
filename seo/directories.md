@@ -92,6 +92,6 @@ so having ours there directly fixes the name confusion. Free advisor profile; me
 
 ## Live profile URLs (owner fills in → routine adds to schema `sameAs`)
 - Google Business Profile:
-- LinkedIn:
+- LinkedIn: https://www.linkedin.com/company/summit-mergers (owner-confirmed 2026-11-17; in sameAs on /, /sell-hvac-business.html, /sell-and-retire.html)
 - BizBuySell:
 - Axial:
