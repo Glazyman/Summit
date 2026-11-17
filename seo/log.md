@@ -14,3 +14,4 @@
 2026-11-18 Shipped guide "Asset Sale vs. Stock Sale for an HVAC Company" with FAQPage+Article JSON-LD, sitemap, llms.txt, 6 internal links (footers x4, HVAC page mistake #3 + footer) — /asset-vs-stock-sale-hvac.html
 2026-11-17 Bing Webmaster Tools verification meta tag added to / ; IndexNow key file /8b2f38b6f4bf481384733f5d66e576a6.txt added
 2026-11-17 Paste-ready listing drafts for Google Business Profile, LinkedIn, BizBuySell, Axial in seo/directories.md (owner submits)
+2026-11-17 Google Search Console verification meta tag added to /
