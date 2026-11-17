@@ -10,3 +10,5 @@
 2026-11-17 FAQ expanded to 9 Q&As (how to sell, worth, broker); JSON-LD regenerated from visible FAQ + WebPage/Breadcrumb/Service schema — /sell-hvac-business.html
 2026-11-17 Internal links to HVAC page: homepage FAQ (contextual "HVAC"), footers on /, /founders.html, /privacy-policy.html, /terms.html
 2026-11-17 llms.txt: added HVAC page and /sell-and-retire.html; hero image preload, og:image size, max-image-preview — /sell-hvac-business.html
+2026-11-18 Fixed orphan: /sell-and-retire.html now linked from footers on /, /founders.html, /terms.html, /privacy-policy.html and the HVAC page — /sell-and-retire.html
+2026-11-18 Shipped guide "Asset Sale vs. Stock Sale for an HVAC Company" with FAQPage+Article JSON-LD, sitemap, llms.txt, 6 internal links (footers x4, HVAC page mistake #3 + footer) — /asset-vs-stock-sale-hvac.html

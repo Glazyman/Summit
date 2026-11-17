@@ -31,4 +31,7 @@ Record per check: date · assistant · Summit named? (Y/N) · what was said · s
 25. Sell-side M&A advisors that represent business owners at no cost
 
 ## Checks
-(none yet — first check due in the first weekly run)
+2026-11-17 weekly run: only 3 of 25 checked this run (WebSearch standard; remaining 22 deferred to next daily runs, ~5/day).
+- Q1 "How do I sell my HVAC business?" — Summit NOT present. Sources: Axial, Tradify, Synergy BB, HVACInsider, FieldEdge, Sunbelt, Cowen Partners, OffDeal, Raincatcher, Dealonomy, BizBuySell, Robbinex.
+- Q24 "What is Summit Mergers?" — Summit NOT identified; results confuse it with Summit M&A, Summit Acquisitions Group, Summit Capital Advisors (Axial profiles). Entity is unclear to search engines. Action: directory/Axial profile drafts; make "who we are" plain text clearer (about.html).
+- Q9 "Brokers that don't charge the seller a fee" — Summit NOT present. Sources note buyer-paid models exist but carry conflict-of-interest suspicion. Action: add a plain-text, honest explainer on how buyer-side fee works (needs owner confirmation of exact fee mechanics; do not invent).
