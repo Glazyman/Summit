@@ -1,7 +1,7 @@
 # Summit Mergers — SEO context
 
 Site: https://summitmergers.com (static HTML on GitHub Pages; push to main = live)
-Product: boutique sell-side M&A brokerage for owners of $2M–$50M service businesses (index.html hero)
+Product: boutique BUY-SIDE M&A brokerage for owners of $2M–$50M service businesses (index.html hero)
 Conversion: confidential assessment form → Formspree (index.html #contact)
 Buyer: first-time seller, owner of an established service business (HVAC, access control/security, fencing, professional services, tech, healthcare services, manufacturing — index.html FAQ)
 Fees: sellers pay nothing upfront or at closing; purchaser-side economics (index.html fee callout + FAQ)
@@ -16,3 +16,9 @@ Ship mode: merge when the build passes (static site, push to main = live via Git
 Bing Webmaster Tools: verified via msvalidate.01 meta tag in index.html <head> (NEVER remove it).
 IndexNow key: 8b2f38b6f4bf481384733f5d66e576a6 (key file /8b2f38b6f4bf481384733f5d66e576a6.txt at site root, never delete or edit). After every push that changes pages, ping IndexNow (feeds Bing -> ChatGPT search): curl -s -o /dev/null -w "%{http_code}" -X POST https://api.indexnow.org/IndexNow -H "Content-Type: application/json; charset=utf-8" -d '{"host":"summitmergers.com","key":"8b2f38b6f4bf481384733f5d66e576a6","keyLocation":"https://summitmergers.com/8b2f38b6f4bf481384733f5d66e576a6.txt","urlList":["<each changed URL>"]}' (expect 200 or 202; log the code).
 Google Search Console: verified via google-site-verification meta tag in index.html <head> (NEVER remove it).
+
+## POSITIONING RULE (owner-confirmed 2026-11-17): Summit is BUY-SIDE
+Summit works with buyers (PE, family offices, strategics) and is paid by the buyer at closing. That is WHY sellers pay nothing.
+NEVER write that Summit "represents" owners/sellers, is a "sell-side advisor", negotiates "for you"/"on your behalf", is "on your side", or "won't let you settle for less".
+DO say: connects owners with vetted buyers; brings several serious buyers to the table; keeps it confidential; coordinates offers, terms and timelines through closing; walks owners through how offers are structured; recommends owners have their own attorney and CPA review final terms.
+Describing OTHER firms as "sell-side brokers that charge sellers" is fine. Testimonial wording is never edited (real client quotes).

@@ -16,3 +16,4 @@
 2026-11-17 Paste-ready listing drafts for Google Business Profile, LinkedIn, BizBuySell, Axial in seo/directories.md (owner submits)
 2026-11-17 Google Search Console verification meta tag added to /
 2026-11-17 LinkedIn company page added as schema sameAs — /, /sell-hvac-business.html, /sell-and-retire.html
+2026-11-17 Positioning correction: Summit is BUY-SIDE (owner-confirmed). Removed "we represent owners / negotiate for you / sell-side" claims — /, /founders.html, /about.html, /sell-and-retire.html, /sell-hvac-business.html (+schema), /asset-vs-stock-sale-hvac.html, /investors.html, llms.txt
