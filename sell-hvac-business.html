@@ -14,6 +14,11 @@
 <meta property="og:image" content="https://summitmergers.com/img/hvac-hero.jpg">
 <meta property="og:site_name" content="Summit Mergers">
 <meta name="theme-color" content="#1B2A41">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1150">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="preload" as="image" href="img/hvac-hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
@@ -62,7 +67,19 @@ p+p{margin-top:1em}
 .hero{position:relative;color:#fff;text-align:center;padding:72px 0 150px;background:#14202F url("img/hvac-hero.jpg") center/cover no-repeat}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,27,41,.86),rgba(17,27,41,.78) 60%,rgba(17,27,41,.9))}
 .hero .wrap{position:relative}
-.pre{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.35rem,3vw,1.9rem);color:#F2E6C9;margin-bottom:.5rem}
+.pre{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.35rem,3vw,1.9rem);line-height:1.3;color:#F2E6C9;margin-bottom:.5rem}
+/* valuation explainer */
+.answer{max-width:820px;margin:0 auto;background:#fff;border:1px solid var(--line);border-left:5px solid var(--navy);padding:24px 26px;font-size:1.06rem}
+.answer b{color:var(--navy)}
+.drivers{max-width:820px;margin:2rem auto 0;border-collapse:collapse;width:100%;background:#fff;font-size:.96rem}
+.drivers th,.drivers td{border:1px solid var(--line);padding:13px 16px;text-align:left;vertical-align:top}
+.drivers th{background:var(--navy);color:#fff;font-weight:700}
+.drivers td:first-child{font-weight:700;color:var(--navy);width:34%}
+.drivers td{color:var(--text-2)}
+.steps-ol{max-width:820px;margin:1.6rem auto 0;padding-left:1.4rem;display:grid;gap:.55rem}
+.steps-ol b{color:var(--navy)}
+.updated{font-size:.78rem;color:rgba(255,255,255,.45)}
+@media (max-width:640px){.drivers th,.drivers td{padding:11px 12px;font-size:.9rem}.drivers td:first-child{width:40%}}
 .hero h1{color:#fff;font-weight:800;font-size:clamp(2.1rem,5.4vw,3.6rem);max-width:940px;margin:0 auto;line-height:1.12}
 .hero h1 .hl{background:linear-gradient(transparent 10%,var(--red) 10%,var(--red) 94%,transparent 94%);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .hero .dek{font-size:clamp(1.05rem,2.2vw,1.25rem);max-width:720px;margin:1.4rem auto 0;color:rgba(255,255,255,.88)}
@@ -306,17 +323,175 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
-    {"@type":"WebPage","name":"Sell Your HVAC Business","url":"https://summitmergers.com/sell-hvac-business.html","isPartOf":{"@id":"https://summitmergers.com/#org"},"about":"Selling an HVAC company"},
-    {"@type":"ProfessionalService","@id":"https://summitmergers.com/#org","name":"Summit Mergers","url":"https://summitmergers.com/","telephone":"+1-845-402-6614","email":"info@summitmergers.com"},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"Do I pay any fees to sell my HVAC business with Summit?","acceptedAnswer":{"@type":"Answer","text":"No. Sellers owe Summit nothing upfront or at closing, and nothing is deducted from proceeds. Our fee is handled on the buyer's side in the normal closing documents."}},
-      {"@type":"Question","name":"Will my technicians and office staff find out I'm selling?","acceptedAnswer":{"@type":"Answer","text":"Not from us. Buyers are vetted and sign confidentiality agreements before they learn your name. We handle every buyer conversation so the business runs normally until you choose to announce."}},
-      {"@type":"Question","name":"How long does it take to sell an HVAC company?","acceptedAnswer":{"@type":"Answer","text":"Most of our transactions close within 3 to 6 months of starting. Clean books and a prepared owner move faster."}},
-      {"@type":"Question","name":"Can I stay on after selling my HVAC business?","acceptedAnswer":{"@type":"Answer","text":"Often, yes. Many private equity buyers ask owners to stay 6 to 24 months for a transition. You can also make a clean exit."}}
-    ]}
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://summitmergers.com/sell-hvac-business.html#page",
+   "url": "https://summitmergers.com/sell-hvac-business.html",
+   "name": "Sell Your HVAC Business",
+   "description": "How to sell an HVAC company: valuation drivers, the sale process, and confidential buyer introductions for owners of $2M–$50M HVAC businesses. No fees to the seller.",
+   "isPartOf": {
+    "@id": "https://summitmergers.com/#website"
+   },
+   "about": {
+    "@id": "https://summitmergers.com/sell-hvac-business.html#service"
+   },
+   "primaryImageOfPage": "https://summitmergers.com/img/hvac-hero.jpg",
+   "datePublished": "2026-11-17",
+   "dateModified": "2026-11-17",
+   "breadcrumb": {
+    "@id": "https://summitmergers.com/sell-hvac-business.html#breadcrumb"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://summitmergers.com/sell-hvac-business.html#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://summitmergers.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Sell Your HVAC Business",
+     "item": "https://summitmergers.com/sell-hvac-business.html"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://summitmergers.com/#website",
+   "url": "https://summitmergers.com/",
+   "name": "Summit Mergers",
+   "publisher": {
+    "@id": "https://summitmergers.com/#org"
+   }
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://summitmergers.com/#org",
+   "name": "Summit Mergers",
+   "legalName": "Summit Mergers LLC",
+   "url": "https://summitmergers.com/",
+   "logo": "https://summitmergers.com/smfavicon.png",
+   "telephone": "+1-845-402-6614",
+   "email": "info@summitmergers.com",
+   "knowsAbout": [
+    "Selling an HVAC business",
+    "HVAC company valuation",
+    "Mergers and acquisitions",
+    "Business brokerage",
+    "Deal structure"
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://summitmergers.com/sell-hvac-business.html#service",
+   "name": "Sell-side M&A advisory for HVAC companies",
+   "serviceType": "Business brokerage and sell-side M&A advisory",
+   "provider": {
+    "@id": "https://summitmergers.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+   },
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Owners of HVAC and mechanical service companies with $2M–$50M in annual revenue"
+   },
+   "description": "Confidential valuation, buyer introductions to private equity groups, family offices and strategic acquirers, due diligence management and negotiation through closing for HVAC company owners. Sellers pay no fees upfront or at closing.",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "No fee to the seller; the advisory fee is paid on the buyer's side at closing."
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://summitmergers.com/sell-hvac-business.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How do I sell my HVAC business?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with a confidential valuation, then prepare the business by cleaning up the financials, documenting maintenance agreements and reducing owner dependence. Next, approach qualified buyers privately (private equity groups, family offices and strategic acquirers) rather than listing publicly, compare offers on structure as well as price, and manage due diligence through closing. Summit Mergers handles each step for HVAC owners at no cost to the seller."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much is my HVAC business worth?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends mostly on your adjusted earnings and the quality of those earnings. HVAC companies are usually valued as a multiple of EBITDA or seller's discretionary earnings, and that multiple rises with recurring maintenance-agreement revenue, a management team that runs the business without you, low technician turnover and clean financials. We provide a confidential valuation for your specific company at no cost."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Should I use a broker to sell my HVAC company?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most owners sell a company only once, while the buyers across the table buy companies regularly. A sell-side advisor brings multiple qualified buyers to the table, protects confidentiality, and negotiates price, tax structure and terms. Many brokers charge a retainer and a success fee from your proceeds. Summit Mergers charges the seller nothing; our fee is paid on the buyer's side."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I really pay nothing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Really. Sellers owe Summit nothing upfront or at closing: no retainer, no hourly bills, and nothing comes out of your proceeds. Our fee is handled on the buyer's side in the normal closing paperwork."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will my employees find out I'm selling?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not from us. Every buyer is vetted and signs a confidentiality agreement before they learn who you are. We handle all the buyer conversations, so your company runs normally until you choose to announce it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take to sell an HVAC company?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most of our deals close in 3 to 6 months from when we start. Clean books and a prepared owner move faster."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I'm a few years away from retiring. Should I still call?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, that's actually the best time. Owners who start preparing 2 to 3 years ahead get the best results. We'll tell you what your company is worth today and what would raise the price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I stay on after the sale?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Often, yes. Many private equity buyers ask owners to stay 6 to 24 months for a transition, and some want you to keep running things. Or you can make a clean exit. We find a buyer whose plans match yours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do I need to have ready for the call?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nothing. Just a rough idea of your revenue and when you'd like to sell. We only look at financials later, and only if you decide to move forward."
+     }
+    }
+   ]
+  }
+ ]
 }
 </script>
 </head>
@@ -339,8 +514,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <p class="pre">Ready to Retire From Your HVAC Company?</p>
-    <h1>Discover How to Sell It for <span class="hl">What It's Really Worth</span>, to a Buyer Who Keeps Your Team Together</h1>
+    <h1><span class="pre">Ready to Sell Your HVAC Business and Retire?</span> Discover How to Sell It for <span class="hl">What It's Really Worth</span>, to a Buyer Who Keeps Your Team Together</h1>
     <p class="dek">…without paying <b>a single dollar</b> in seller fees, and without your techs, customers or competitors ever finding out until you're ready.</p>
     <a href="#apply" class="btn"><span class="stack">Get My Free Confidential Valuation&nbsp;→</span></a>
     <div class="trustline"><span>100% confidential</span><span>$0 seller fees</span><span>No obligation</span></div>
@@ -428,8 +602,40 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   </div>
 </section>
 
+<!-- VALUATION / ANSWER-FIRST (Google + AI answers) -->
+<section class="gray" id="how-hvac-companies-are-valued">
+  <div class="wrap">
+    <h2>How Is an HVAC Business <span class="it">Valued?</span></h2>
+    <div class="answer">
+      <p><b>Short answer:</b> Most established HVAC companies are valued as a multiple of their adjusted earnings (EBITDA, or seller's discretionary earnings for smaller firms). The multiple a buyer will pay depends mainly on how much of the revenue is recurring, how much the business relies on the owner, and how clean and verifiable the books are.</p>
+      <p>Two HVAC companies with the same revenue can sell for very different prices. The table below shows what moves the number.</p>
+    </div>
+    <table class="drivers">
+      <thead><tr><th>What buyers look at</th><th>Why it changes your price</th></tr></thead>
+      <tbody>
+        <tr><td>Maintenance agreements &amp; service contracts</td><td>Written, transferable agreements are predictable revenue. Buyers pay the most for cash flow they can count on after you leave.</td></tr>
+        <tr><td>Service &amp; replacement vs. new construction</td><td>Repeat service and replacement work is steadier than builder bids, which rise and fall with construction cycles.</td></tr>
+        <tr><td>Owner dependence</td><td>If you run dispatch, sales and the key customer relationships yourself, buyers discount the price for the cost of replacing you.</td></tr>
+        <tr><td>Technician retention</td><td>Licensed, long-tenured techs are hard to hire. Low turnover tells a buyer the business will keep running after the sale.</td></tr>
+        <tr><td>Clean, verifiable financials</td><td>Buyers pay for earnings they can verify. CPA-prepared statements with personal expenses separated hold up in due diligence.</td></tr>
+        <tr><td>Customer concentration</td><td>If one customer or contract is a large share of revenue, buyers see risk and price it in.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 style="margin-top:3.4rem">How to Sell Your HVAC Business, <span class="it">Step by Step</span></h2>
+    <ol class="steps-ol">
+      <li><b>Get a confidential valuation</b> so you know what the market will pay before you talk to any buyer.</li>
+      <li><b>Prepare the business:</b> clean up the financials, document your maintenance agreements, and reduce how much depends on you.</li>
+      <li><b>Approach the right buyers privately:</b> private equity groups, family offices and strategic acquirers active in HVAC, never a public listing.</li>
+      <li><b>Compare offers on structure, not just price:</b> cash at close, earnouts, asset vs. stock sale, and plans for your team.</li>
+      <li><b>Get through due diligence and close,</b> with the buyer's document requests handled for you so the business keeps performing.</li>
+    </ol>
+    <p class="center" style="margin-top:1.8rem;color:var(--text-2)">Summit Mergers handles every one of these steps for HVAC owners, at no cost to the seller.</p>
+  </div>
+</section>
+
 <!-- MISTAKES -->
-<section class="gray">
+<section>
   <div class="wrap">
     <h2>The 3 Biggest Mistakes <span class="it">HVAC Owners Make</span> When Selling</h2>
     <p class="sub-h">Each one can cost you hundreds of thousands of dollars, and most owners don't find out until it's too late.</p>
@@ -631,6 +837,9 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   <div class="wrap">
     <h2>Frequently Asked <span class="it">Questions</span></h2>
     <div class="faq">
+      <details><summary><span class="q">Question:</span>How do I sell my HVAC business?</summary><p><b>Answer:</b> Start with a confidential valuation, then prepare the business by cleaning up the financials, documenting maintenance agreements and reducing owner dependence. Next, approach qualified buyers privately (private equity groups, family offices and strategic acquirers) rather than listing publicly, compare offers on structure as well as price, and manage due diligence through closing. Summit Mergers handles each step for HVAC owners at no cost to the seller.</p></details>
+      <details><summary><span class="q">Question:</span>How much is my HVAC business worth?</summary><p><b>Answer:</b> It depends mostly on your adjusted earnings and the quality of those earnings. HVAC companies are usually valued as a multiple of EBITDA or seller's discretionary earnings, and that multiple rises with recurring maintenance-agreement revenue, a management team that runs the business without you, low technician turnover and clean financials. We provide a confidential valuation for your specific company at no cost.</p></details>
+      <details><summary><span class="q">Question:</span>Should I use a broker to sell my HVAC company?</summary><p><b>Answer:</b> Most owners sell a company only once, while the buyers across the table buy companies regularly. A sell-side advisor brings multiple qualified buyers to the table, protects confidentiality, and negotiates price, tax structure and terms. Many brokers charge a retainer and a success fee from your proceeds. Summit Mergers charges the seller nothing; our fee is paid on the buyer's side.</p></details>
       <details><summary><span class="q">Question:</span>Do I really pay nothing?</summary><p><b>Answer:</b> Really. Sellers owe Summit nothing upfront or at closing: no retainer, no hourly bills, and nothing comes out of your proceeds. Our fee is handled on the buyer's side in the normal closing paperwork.</p></details>
       <details><summary><span class="q">Question:</span>Will my employees find out I'm selling?</summary><p><b>Answer:</b> Not from us. Every buyer is vetted and signs a confidentiality agreement before they learn who you are. We handle all the buyer conversations, so your company runs normally until you choose to announce it.</p></details>
       <details><summary><span class="q">Question:</span>How long does it take to sell an HVAC company?</summary><p><b>Answer:</b> Most of our deals close in 3 to 6 months from when we start. Clean books and a prepared owner move faster.</p></details>
@@ -655,6 +864,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   <div class="wrap">
     <div>© <span id="yr"></span> Summit Mergers LLC · info@summitmergers.com · (845) 402-6614</div>
     <div><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></div>
+    <div class="updated">Last updated November 17, 2026</div>
     <p class="disc">Testimonials reflect the experiences of individual clients and are not a guarantee of future results. Sale timelines and outcomes vary based on each company's financials, market conditions and deal terms.</p>
   </div>
 </footer>
