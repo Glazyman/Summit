@@ -253,6 +253,9 @@ p+p{margin-top:1em}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--navy)}
 .field textarea{min-height:90px;resize:vertical}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.callplan{list-style:none;margin:-.4rem 0 1rem;display:grid;gap:8px}
+.callplan li{position:relative;padding-left:28px;font-size:.95rem;color:var(--text)}
+.callplan li::before{content:"✔";position:absolute;left:0;top:0;color:var(--check);font-weight:900}
 .qlabel{font-weight:700;color:var(--navy);margin:1.3rem 0 .6rem;font-size:1rem}
 .fstep legend + .qlabel{margin-top:.6rem}
 .opts.three{grid-template-columns:repeat(3,1fr)}
@@ -530,7 +533,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   <div class="wrap">
     <h1><span class="pre">Ready to Sell Your HVAC Business and Retire?</span> Discover How to Sell It for <span class="hl">What It's Really Worth</span>, to a Buyer Who Keeps Your Team Together</h1>
     <p class="dek">…without paying <b>a single dollar</b> in seller fees, and without your techs, customers or competitors ever finding out until you're ready.</p>
-    <a href="#apply" class="btn"><span class="stack">See If We Have a Buyer for You&nbsp;→</span></a>
+    <a href="#apply" class="btn"><span class="stack">Book My Free Confidential Call&nbsp;→</span></a>
     <div class="trustline"><span>100% confidential</span><span>$0 seller fees</span><span>No obligation</span></div>
   </div>
 </section>
@@ -539,7 +542,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <div class="wrap">
   <div class="optin">
     <div class="optin-in">
-      <div class="stepl">Step 1: See if we have a buyer<span class="bar"><i></i></span></div>
+      <div class="stepl">Step 1: Tell us about your company<span class="bar"><i></i></span></div>
       <h3>What's your company's approximate annual revenue?</h3>
       <div class="revs" id="revs">
         <button type="button" data-v="$2M - $5M">$2M – $5M</button>
@@ -596,7 +599,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     </ul>
     <div class="arrowcta">
       <svg viewBox="0 0 90 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c18 2 40 8 60 22"/><path d="M50 32l14-1-5-13"/></svg>
-      <div class="cta-col"><a href="#apply" class="btn">Yes, Find Me a Buyer</a><span class="note">Takes about 3 minutes · No documents required</span></div>
+      <div class="cta-col"><a href="#apply" class="btn">Yes, Book My Free Call</a><span class="note">Takes about 3 minutes · No documents required</span></div>
       <svg class="flip" viewBox="0 0 90 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c18 2 40 8 60 22"/><path d="M50 32l14-1-5-13"/></svg>
     </div>
   </div>
@@ -683,7 +686,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     </div>
     <div class="arrowcta">
       <svg viewBox="0 0 90 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c18 2 40 8 60 22"/><path d="M50 32l14-1-5-13"/></svg>
-      <div class="cta-col"><a href="#apply" class="btn">Book My Confidential Buyer Call</a><span class="note">A senior advisor will call you within 1 business day</span></div>
+      <div class="cta-col"><a href="#apply" class="btn">Book My Free Confidential Call</a><span class="note">A senior advisor will call you within 1 business day</span></div>
       <svg class="flip" viewBox="0 0 90 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c18 2 40 8 60 22"/><path d="M50 32l14-1-5-13"/></svg>
     </div>
   </div>
@@ -764,7 +767,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <!-- FORM -->
 <section class="formsec" id="apply">
   <div class="wrap">
-    <h2>Book Your <span class="it">Free Confidential Buyer Call</span></h2>
+    <h2>Book Your <span class="it">Free Confidential Call</span></h2>
     <p class="sub-h">Answer a few quick questions and a senior advisor will call you within one business day.</p>
     <div class="fcard">
       <div class="fhead"><div class="row"><span id="stepLabel">Step 1 of 9</span><span>🔒 Secure &amp; confidential</span></div><div class="pbar"><i id="barFill"></i></div></div>
@@ -861,8 +864,14 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
             </div>
           </fieldset>
           <fieldset class="fstep" data-step="9">
-            <legend>Where should we reach you?</legend>
-            <p class="hint">A senior advisor will call you within one business day to go over your answers and which of our buyers could be a fit. We never share your information.</p>
+            <legend>Last step: where should we call you?</legend>
+            <p class="hint">Within one business day, a senior advisor will call you personally to:</p>
+            <ul class="callplan">
+              <li>Go over what you shared about your company</li>
+              <li>Tell you which private equity, family office and strategic buyers are looking for companies like yours</li>
+              <li>Set up confidential introductions, if it's a fit and you want them</li>
+            </ul>
+            <p class="hint">No pressure and no obligation. Your information is never shared with a buyer without your permission.</p>
             <div class="two">
               <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
               <div class="field"><label for="phone">Best phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
@@ -884,8 +893,8 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
         </div>
       </form>
       <div class="done" id="done">
-        <h3>Thank You. We've Received Your Request.</h3>
-        <p>A senior advisor will review your answers and call you within one business day. If you'd like to talk sooner, call or text <a href="tel:+18454026614" style="color:var(--red);font-weight:700">(845) 402-6614</a>.</p>
+        <h3>You're All Set. We'll Call You Soon.</h3>
+        <p>A senior advisor will review your answers and call you within one business day to talk through which buyers could be a fit. If you'd like to talk sooner, call or text <a href="tel:+18454026614" style="color:var(--red);font-weight:700">(845) 402-6614</a>.</p>
       </div>
       <div class="secure"><span>🔒 Your information is never shared or sold</span><span>✔ No obligation</span><span>✔ $0 seller fees</span></div>
     </div>
@@ -914,7 +923,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <section class="ps">
   <div class="narrow">
     <p><span class="p">P.S.</span> If you skipped to the bottom, here's the short version: buyers are actively looking for well-run HVAC companies, we keep the whole process confidential, and <b>you pay us nothing</b>. A few minutes will tell you whether we're a fit.</p>
-    <div class="center" style="margin-top:1.8rem"><a href="#apply" class="btn">See If We Have a Buyer for You →</a></div>
+    <div class="center" style="margin-top:1.8rem"><a href="#apply" class="btn">Book My Free Confidential Call →</a></div>
   </div>
 </section>
 
@@ -929,7 +938,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   </div>
 </footer>
 
-<div class="mcta" id="mcta"><a href="#apply" class="btn">See If We Have a Buyer →</a></div>
+<div class="mcta" id="mcta"><a href="#apply" class="btn">Book My Free Call →</a></div>
 
 <script>
 (function(){
@@ -943,7 +952,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   function show(n){
     cur=n; steps.forEach(function(s){ s.classList.toggle('on', +s.dataset.step===n); });
     lab.textContent='Step '+n+' of '+total; fill.style.width=(n/total*100)+'%'; back.hidden = n===1;
-    next.textContent = n===total ? 'Send My Request →' : 'Next Step →';
+    next.textContent = n===total ? 'Book My Confidential Call →' : 'Next Step →';
     err.textContent='';
   }
   function valid(){
