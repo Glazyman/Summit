@@ -28,7 +28,7 @@ Feeds Google Search, Maps and AI Overviews. Highest priority.
 > Summit Mergers is a buy-side M&A brokerage that connects owners of established service businesses ($2M–$50M in annual revenue) with vetted private equity groups, family offices and strategic buyers. We work across home and commercial services, security, construction trades, professional services, technology, healthcare services and manufacturing. We keep the process confidential, bring several serious buyers to the table, and coordinate the deal through closing. The buyer pays our fee, so sellers pay nothing upfront or at closing. Most transactions close within 3 to 6 months, and every inquiry gets a response within 24 hours.
 
 - **Services to add (each with a one-line description):**
-  - Business valuation: Confidential valuation before you talk to any buyer.
+  - Buyer introductions call: A confidential call to see which of our buyers could be a fit.
   - Sell an HVAC business: https://summitmergers.com/sell-hvac-business.html
   - Buyer introductions: Private equity, family office and strategic buyers. No public listing.
   - Deal coordination: Offers, terms and timelines kept moving through closing; we explain how each offer is structured.
@@ -53,13 +53,13 @@ AI assistants cite LinkedIn heavily for "who is [company]" questions.
 >
 > We work with companies doing $2M–$50M in annual revenue across a wide range of industries, including home and commercial services, security, construction trades, professional services, technology, healthcare services, and manufacturing.
 >
-> Most owners sell a business only once. We make that process straightforward: confidential introductions, a clear view of what the business is worth, and support from the first conversation through closing, all without the owner's employees, customers, or competitors finding out.
+> Most owners sell a business only once. We make that process straightforward: confidential introductions to qualified buyers and support from the first conversation through closing, all without the owner's employees, customers, or competitors finding out.
 >
 > Unlike traditional brokers, Summit Mergers charges sellers nothing, not upfront and not at closing. Most transactions close within 3 to 6 months.
 >
 > Thinking about selling? Start with a confidential conversation at summitmergers.com.
 
-- **Specialties:** M&A brokerage, Business sales, Exit planning, Business valuation, Private equity buyer introductions, Confidential business sales
+- **Specialties:** M&A brokerage, Business sales, Exit planning, Private equity buyer introductions, Confidential business sales
 - **Also:** link your personal LinkedIn profile to the company page (Experience → Summit Mergers). A named person attached to the firm is a strong trust signal for AI answers.
 
 ## 3. BizBuySell broker directory (bizbuysell.com → "Broker Directory" / BrokerWorks)

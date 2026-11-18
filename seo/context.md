@@ -22,3 +22,7 @@ Summit works with buyers (PE, family offices, strategics) and is paid by the buy
 NEVER write that Summit "represents" owners/sellers, is a "sell-side advisor", negotiates "for you"/"on your behalf", is "on your side", or "won't let you settle for less".
 DO say: connects owners with vetted buyers; brings several serious buyers to the table; keeps it confidential; coordinates offers, terms and timelines through closing; walks owners through how offers are structured; recommends owners have their own attorney and CPA review final terms.
 Describing OTHER firms as "sell-side brokers that charge sellers" is fine. Testimonial wording is never edited (real client quotes).
+
+## OFFER RULE (owner-confirmed 2026-11-17): Summit does NOT offer valuations
+The conversion offer is a FREE CONFIDENTIAL BUYER CALL: a follow-up call to see if Summit has a buyer for the company and to introduce the owner to PE groups / family offices / strategic buyers.
+NEVER promise a "valuation", "free valuation", "confidential assessment", "what your company is worth" or "an honest read on what it could sell for". Educational content explaining HOW HVAC companies are valued is fine.
