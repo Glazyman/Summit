@@ -104,6 +104,7 @@ p+p{margin-top:1em}
 @keyframes barmove{to{background-position:28px 0}}
 .optin h3{font-size:1.55rem;margin-bottom:.4rem;line-height:1.25}
 .optin-sub{color:var(--text-2);font-size:.95rem;margin-bottom:1rem}
+.reasons button{font-weight:700;padding:15px 10px;line-height:1.3}
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .revs button{font:inherit;font-weight:700;font-size:1rem;color:var(--navy);background:#fff;border:2px solid var(--line);border-radius:4px;padding:14px 8px;cursor:pointer;transition:border-color .15s,background .15s}
 .revs button:hover{border-color:var(--red);background:#FFF7F7;color:var(--red)}
@@ -546,15 +547,15 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   <div class="optin">
     <div class="optin-in">
       <div class="stepl">Private &amp; confidential · 60 seconds<span class="bar"><i></i></span></div>
-      <h3>Buyers are actively acquiring HVAC companies right now. <span class="red">Where does yours fit?</span></h3>
-      <p class="optin-sub">Tap your annual revenue to get started:</p>
-      <div class="revs" id="revs">
-        <button type="button" data-v="$2M - $5M">$2M – $5M</button>
-        <button type="button" data-v="$5M - $10M">$5M – $10M</button>
-        <button type="button" data-v="$10M - $25M">$10M – $25M</button>
-        <button type="button" data-v="$25M - $50M">$25M – $50M</button>
-        <button type="button" data-v="$50M+">$50M+</button>
-        <button type="button" data-v="Under $2M">Under $2M</button>
+      <h3>Be honest. <span class="red">What's got you thinking about selling?</span></h3>
+      <p class="optin-sub">Tap the one that fits. Every owner's reason is different, and it changes which buyer is right for you.</p>
+      <div class="revs reasons" id="reasons">
+        <button type="button" data-reason="Ready to retire">I'm ready to retire</button>
+        <button type="button" data-reason="No one to take over">No one to take it over</button>
+        <button type="button" data-reason="Burned out / tired of carrying it">I'm tired of carrying it all</button>
+        <button type="button" data-reason="Getting buyer calls and letters">Buyers keep calling me</button>
+        <button type="button" data-reason="Health or family">Health or family reasons</button>
+        <button type="button" data-reason="Just curious what it's worth to buyers">Just curious what's out there</button>
       </div>
       <p class="fine">No financials needed. Nobody sees this but us.</p>
     </div>
@@ -882,6 +883,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
           <input type="hidden" name="industry" value="HVAC">
           <input type="hidden" name="source" value="hvac funnel">
           <input type="hidden" name="campaign" id="campaign" value="">
+          <input type="hidden" name="selling_reason" id="sellingReason" value="">
 
           <p class="err" id="err" role="alert"></p>
           <div class="fnav">
@@ -969,12 +971,11 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     return true;
   }
 
-  // Two-step opt-in: the revenue picked in the hero box carries into the form
-  document.querySelectorAll('#revs button').forEach(function(b){
+  // Problem-first hero box: the reason they tap is stored and carried into the questionnaire
+  document.querySelectorAll('#reasons button').forEach(function(b){
     b.addEventListener('click', function(){
-      var r=form.querySelector('input[name=revenue][value="'+b.dataset.v+'"]');
-      if(r) r.checked=true;
-      show(2);
+      document.getElementById('sellingReason').value=b.dataset.reason;
+      show(1);
       var top=apply.getBoundingClientRect().top+window.pageYOffset-10;
       window.scrollTo({top:top,behavior:'smooth'});
     });
