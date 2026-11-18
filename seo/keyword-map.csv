@@ -1,26 +1,31 @@
 query,intent,monthly volume,difficulty,target URL,status,current position,last checked
 sell my service business,transactional,not measured,not measured,/,live,not measured,2026-11-11
 m&a advisor for service businesses,commercial,not measured,not measured,/founders.html,live,not measured,2026-11-11
-sell my hvac business,transactional,not measured,not measured,/sell-hvac-business.html,live,not measured,2026-11-17
+sell my hvac business,transactional,10–100 (KP 2026-11-18),not measured,/sell-hvac-business.html,live,not measured,2026-11-17
 sell security / access control company,transactional,not measured,not measured,,gap,,
 sell fencing company,transactional,not measured,not measured,,gap,,
 asset sale vs stock sale,informational,not measured,not measured,/asset-vs-stock-sale-hvac.html,live,not measured,2026-11-18
 how much is my service business worth,informational,not measured,not measured,,gap,,
 lower middle market deal flow,commercial,not measured,not measured,/investors.html,live,not measured,2026-11-11
-how to sell an hvac business,informational,not measured,not measured,/sell-hvac-business.html,live,not measured,2026-11-17
-how much is my hvac business worth,informational,not measured,not measured,/sell-hvac-business.html#how-hvac-companies-are-valued,live,not measured,2026-11-17
-hvac business broker,commercial,not measured,not measured,/sell-hvac-business.html,live,not measured,2026-11-17
+how to sell an hvac business,informational,10–100 (KP 2026-11-18),not measured,/sell-hvac-business.html,live,not measured,2026-11-17
+how much is my hvac business worth,informational,10–100 (KP 2026-11-18),not measured,/sell-hvac-business.html#how-hvac-companies-are-valued,live,not measured,2026-11-17
+hvac business broker,commercial,100–1K (KP 2026-11-18),not measured,/sell-hvac-business.html,live,not measured,2026-11-17
 sell my business and retire,transactional,not measured,not measured,/sell-and-retire.html,live,not measured,2026-11-17
-how much can i sell my hvac business for,informational,not measured,not measured,/sell-hvac-business.html#how-hvac-companies-are-valued,live,not measured,2026-11-18
-how to value an hvac business,informational,not measured,not measured,/sell-hvac-business.html#how-hvac-companies-are-valued,live,not measured,2026-11-18
-hvac ebitda multiple,informational,not measured,not measured,(planned) /hvac-business-valuation.html,gap,,
-hvac business valuation calculator,informational,not measured,not measured,(planned) /hvac-business-valuation.html,gap,,
-who buys hvac companies,commercial,not measured,not measured,/sell-hvac-business.html,live,not measured,2026-11-18
-private equity firms buying hvac companies,commercial,not measured,not measured,(planned) /sell-hvac-company-to-private-equity.html,gap,,
-hvac companies selling to private equity,commercial,not measured,not measured,(planned) /sell-hvac-company-to-private-equity.html,gap,,
-how to sell your company to private equity,commercial,not measured,not measured,(planned) /sell-hvac-company-to-private-equity.html,gap,,
-should i sell my business and retire,informational,not measured,not measured,/sell-and-retire.html,live,not measured,2026-11-18
-how to sell your business and retire,informational,not measured,not measured,/sell-and-retire.html,live,not measured,2026-11-18
-sell my plumbing business,transactional,not measured,not measured,(planned) /sell-plumbing-business.html,gap,,
-how to sell an electrical contracting business,transactional,not measured,not measured,(planned) /sell-electrical-contracting-business.html,gap,,
-hvac business broker florida,transactional,not measured,not measured,,gap,,
+how much can i sell my hvac business for,informational,no data (KP 2026-11-18),not measured,/sell-hvac-business.html#how-hvac-companies-are-valued,live,not measured,2026-11-18
+how to value an hvac business,informational,10–100 (KP 2026-11-18),not measured,/sell-hvac-business.html#how-hvac-companies-are-valued,live,not measured,2026-11-18
+hvac ebitda multiple,informational,no data (merged) (KP 2026-11-18),not measured,(planned) /hvac-business-valuation.html,gap,,
+hvac business valuation calculator,informational,10–100 (KP 2026-11-18),not measured,(planned) /hvac-business-valuation.html,gap,,
+who buys hvac companies,commercial,no data (KP 2026-11-18),not measured,/sell-hvac-business.html,live,not measured,2026-11-18
+private equity firms buying hvac companies,commercial,10–100 (KP 2026-11-18),not measured,(planned) /sell-hvac-company-to-private-equity.html,gap,,
+hvac companies selling to private equity,commercial,no data (KP 2026-11-18),not measured,(planned) /sell-hvac-company-to-private-equity.html,gap,,
+how to sell your company to private equity,commercial,10–100 (KP 2026-11-18),not measured,(planned) /sell-hvac-company-to-private-equity.html,gap,,
+should i sell my business and retire,informational,10–100 (KP 2026-11-18),not measured,/sell-and-retire.html,live,not measured,2026-11-18
+how to sell your business and retire,informational,no data (KP 2026-11-18),not measured,/sell-and-retire.html,live,not measured,2026-11-18
+sell my plumbing business,transactional,10–100 (KP 2026-11-18),not measured,(planned) /sell-plumbing-business.html,gap,,
+how to sell an electrical contracting business,transactional,no data (KP 2026-11-18),not measured,(planned) /sell-electrical-contracting-business.html,gap,,
+hvac business broker florida,transactional,no data (KP 2026-11-18),not measured,,gap,,
+hvac business valuation,informational,100–1K (KP 2026-11-18),Low,(planned) /hvac-business-valuation.html,gap,,
+private equity hvac,commercial,100–1K (KP 2026-11-18),Low,(planned) /sell-hvac-company-to-private-equity.html,gap,,
+hvac private equity,commercial,100–1K (KP 2026-11-18),Low,(planned) /sell-hvac-company-to-private-equity.html,gap,,
+do i need a business broker to sell my business,informational,10–100 (KP 2026-11-18),Medium,(planned) /do-i-need-a-business-broker.html,gap,,
+sell my business broker,commercial,100–1K (KP 2026-11-18),Medium,/ (homepage) + (planned) broker page,gap,,

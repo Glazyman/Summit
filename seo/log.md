@@ -22,3 +22,4 @@
 2026-11-18 Entity-clarity 'Who we are' plain-text block + AboutPage/ProfessionalService JSON-LD (same @id as homepage) — /about.html#who-we-are
 2026-11-18 IndexNow ping for /, /about.html, /founders.html: HTTP 200; live confirmed
 2026-11-18 Keyword research (Google autocomplete, 110 queries) saved to seo/keyword-research-2026-11-18.md; HVAC page title +"Company", "HVAC business valuation"/"EBITDA multiple" wording, 3 FAQs (who buys / sell to PE? / what multiple) + schema resync — /sell-hvac-business.html; /sell-and-retire.html title → "How to Sell Your Business and Retire"; backlog: PE guide, valuation guide, plumbing + electrical pages
+2026-11-18 Google Keyword Planner volumes pulled (seo/keyword-planner-2026-11-18.md); "HVAC business broker" (100–1K, bids to $136) added to HVAC page title/header/FAQ + schema; keyword map volumes filled; backlog re-ordered by volume + broker-question page added
