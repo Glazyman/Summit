@@ -253,6 +253,10 @@ p+p{margin-top:1em}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--navy)}
 .field textarea{min-height:90px;resize:vertical}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qlabel{font-weight:700;color:var(--navy);margin:1.3rem 0 .6rem;font-size:1rem}
+.fstep legend + .qlabel{margin-top:.6rem}
+.opts.three{grid-template-columns:repeat(3,1fr)}
+.opt-tag{font-family:var(--sans);font-weight:400;font-size:.95rem;color:var(--text-2)}
 .fnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:1.4rem}
 .back{background:none;border:0;font:inherit;color:var(--text-2);cursor:pointer;text-decoration:underline;font-size:.92rem}
 .back[hidden]{display:block;visibility:hidden}
@@ -314,7 +318,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   .seal{position:static;margin:0 auto 14px;width:84px;height:84px;display:block}
   .guar h2{text-align:center}
   .tbanner{height:110px}
-  .opts,.two{grid-template-columns:1fr}
+  .opts,.two,.opts.three{grid-template-columns:1fr}
   .fbody{padding:24px 16px}
   .fhead{padding:14px 16px}
   .mcta{display:block}
@@ -535,7 +539,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <div class="wrap">
   <div class="optin">
     <div class="optin-in">
-      <div class="stepl">Step 1 of 2: See if we have a buyer<span class="bar"><i></i></span></div>
+      <div class="stepl">Step 1: See if we have a buyer<span class="bar"><i></i></span></div>
       <h3>What's your company's approximate annual revenue?</h3>
       <div class="revs" id="revs">
         <button type="button" data-v="$2M - $5M">$2M – $5M</button>
@@ -571,7 +575,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
       <p>Now you're starting to think about what comes next. Maybe the kids don't want the business. Maybe you're tired of covering for the tech who called out in the middle of July. Or maybe you just want your life back while you can still enjoy it.</p>
       <p>Whatever the reason, <b>selling your company is probably the biggest financial decision you'll ever make.</b> And you only get to make it once.</p>
       <p>That's why we do things differently. We don't put your company on a public listing site. We don't charge you a retainer. And <span class="hl">we don't take a cent out of your proceeds at closing.</span> Instead, we quietly introduce you to the private equity groups, family offices and strategic buyers who are actively looking for HVAC companies like yours, and we keep the deal moving all the way to closing.</p>
-      <p>Take two minutes, answer a few quick questions, and a senior advisor will call you within one business day. At the very least, you'll know what your company is worth.</p>
+      <p>Take a few minutes, answer some quick questions, and a senior advisor will call you within one business day. At the very least, you'll know what your company is worth.</p>
       <div class="sig"><div><span class="script">The Summit Mergers Team</span><small>Summit Mergers LLC · Business Brokerage &amp; M&amp;A</small></div></div>
     </div>
   </div>
@@ -592,7 +596,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     </ul>
     <div class="arrowcta">
       <svg viewBox="0 0 90 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c18 2 40 8 60 22"/><path d="M50 32l14-1-5-13"/></svg>
-      <div class="cta-col"><a href="#apply" class="btn">Yes, I Want My Free Valuation</a><span class="note">Takes about 2 minutes · No financials required</span></div>
+      <div class="cta-col"><a href="#apply" class="btn">Yes, I Want My Free Valuation</a><span class="note">Takes about 3 minutes · No documents required</span></div>
       <svg class="flip" viewBox="0 0 90 44" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c18 2 40 8 60 22"/><path d="M50 32l14-1-5-13"/></svg>
     </div>
   </div>
@@ -690,7 +694,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
   <div class="wrap">
     <h2>How It Works: <span class="it">3 Simple Steps</span></h2>
     <div class="steps">
-      <div class="step"><div class="num">1</div><h3>Answer a few questions</h3><p>About two minutes. No tax returns, no P&amp;Ls, and you don't have to give us your company name yet.</p></div>
+      <div class="step"><div class="num">1</div><h3>Answer a few questions</h3><p>About three minutes. No tax returns, no P&amp;Ls, and you don't have to give us your company name yet.</p></div>
       <div class="step"><div class="num">2</div><h3>Have a private call</h3><p>A senior advisor calls you within one business day with an honest read on what your company could sell for.</p></div>
       <div class="step"><div class="num">3</div><h3>You decide</h3><p>Sell now, get ready for a sale in a year or two, or do nothing at all. There's no pressure and no obligation.</p></div>
     </div>
@@ -763,54 +767,100 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     <h2>Request Your <span class="it">Free Confidential Valuation</span></h2>
     <p class="sub-h">Answer a few quick questions and a senior advisor will call you within one business day.</p>
     <div class="fcard">
-      <div class="fhead"><div class="row"><span id="stepLabel">Step 1 of 5</span><span>🔒 Secure &amp; confidential</span></div><div class="pbar"><i id="barFill"></i></div></div>
+      <div class="fhead"><div class="row"><span id="stepLabel">Step 1 of 9</span><span>🔒 Secure &amp; confidential</span></div><div class="pbar"><i id="barFill"></i></div></div>
       <form id="funnel" novalidate>
         <div class="fbody">
-          <fieldset class="fstep on" data-step="1">
+          <fieldset class="fstep on" data-step="1" data-req="revenue" data-auto="1">
             <legend>What's your approximate annual revenue?</legend>
             <p class="hint">A ballpark is fine. This stays between us.</p>
             <div class="opts">
-              <div class="opt"><input type="radio" name="revenue" id="r1" value="$2M - $5M"><label for="r1">$2M – $5M</label></div>
-              <div class="opt"><input type="radio" name="revenue" id="r2" value="$5M - $10M"><label for="r2">$5M – $10M</label></div>
-              <div class="opt"><input type="radio" name="revenue" id="r3" value="$10M - $25M"><label for="r3">$10M – $25M</label></div>
-              <div class="opt"><input type="radio" name="revenue" id="r4" value="$25M - $50M"><label for="r4">$25M – $50M</label></div>
-              <div class="opt"><input type="radio" name="revenue" id="r5" value="$50M+"><label for="r5">$50M+</label></div>
-              <div class="opt"><input type="radio" name="revenue" id="r0" value="Under $2M"><label for="r0">Under $2M</label></div>
+              <div class="opt"><input type="radio" name="revenue" id="r0" value="$2M - $5M"><label for="r0">$2M – $5M</label></div>
+              <div class="opt"><input type="radio" name="revenue" id="r1" value="$5M - $10M"><label for="r1">$5M – $10M</label></div>
+              <div class="opt"><input type="radio" name="revenue" id="r2" value="$10M - $25M"><label for="r2">$10M – $25M</label></div>
+              <div class="opt"><input type="radio" name="revenue" id="r3" value="$25M - $50M"><label for="r3">$25M – $50M</label></div>
+              <div class="opt"><input type="radio" name="revenue" id="r4" value="$50M+"><label for="r4">$50M+</label></div>
+              <div class="opt"><input type="radio" name="revenue" id="r5" value="Under $2M"><label for="r5">Under $2M</label></div>
             </div>
           </fieldset>
-          <fieldset class="fstep" data-step="2">
-            <legend>What's your service mix?</legend>
+          <fieldset class="fstep" data-step="2" data-req="customer_type" data-auto="1">
+            <legend>Who are your customers?</legend>
             <p class="hint">Pick the closest match.</p>
-            <div class="opts">
-              <div class="opt"><input type="radio" name="mix" id="m1" value="Mostly residential service & replacement"><label for="m1">Mostly residential</label></div>
-              <div class="opt"><input type="radio" name="mix" id="m2" value="Mostly commercial"><label for="m2">Mostly commercial</label></div>
-              <div class="opt"><input type="radio" name="mix" id="m3" value="Residential + commercial mix"><label for="m3">A mix of both</label></div>
-              <div class="opt"><input type="radio" name="mix" id="m4" value="Mostly new construction"><label for="m4">Mostly new construction</label></div>
+            <div class="opts three">
+              <div class="opt"><input type="radio" name="customer_type" id="c0" value="Residential"><label for="c0">Residential</label></div>
+              <div class="opt"><input type="radio" name="customer_type" id="c1" value="Commercial"><label for="c1">Commercial</label></div>
+              <div class="opt"><input type="radio" name="customer_type" id="c2" value="Both residential and commercial"><label for="c2">Both</label></div>
             </div>
           </fieldset>
-          <fieldset class="fstep" data-step="3">
-            <legend>When would you ideally like to sell?</legend>
-            <p class="hint">No wrong answer. Many of the best outcomes start years ahead.</p>
+          <fieldset class="fstep" data-step="3" data-req="work_type" data-auto="1">
+            <legend>What does most of your work come from?</legend>
+            <p class="hint">Pick the one that brings in the most revenue.</p>
             <div class="opts">
-              <div class="opt"><input type="radio" name="timeline" id="t1" value="Within 6 months"><label for="t1">Within 6 months</label></div>
-              <div class="opt"><input type="radio" name="timeline" id="t2" value="Within 12 months"><label for="t2">Within 12 months</label></div>
-              <div class="opt"><input type="radio" name="timeline" id="t3" value="1-3 years"><label for="t3">In 1–3 years</label></div>
-              <div class="opt"><input type="radio" name="timeline" id="t4" value="Just exploring"><label for="t4">Just exploring</label></div>
+              <div class="opt"><input type="radio" name="work_type" id="w0" value="New install"><label for="w0">New install</label></div>
+              <div class="opt"><input type="radio" name="work_type" id="w1" value="Retrofit / replacement"><label for="w1">Retrofit / replacement</label></div>
+              <div class="opt"><input type="radio" name="work_type" id="w2" value="Service & maintenance"><label for="w2">Service &amp; maintenance</label></div>
+              <div class="opt"><input type="radio" name="work_type" id="w3" value="Fairly even mix"><label for="w3">A fairly even mix</label></div>
             </div>
           </fieldset>
-          <fieldset class="fstep" data-step="4">
-            <legend>What matters most to you in a sale?</legend>
-            <p class="hint">Check all that apply.</p>
+          <fieldset class="fstep" data-step="4" data-req="years_in_business" data-auto="1">
+            <legend>How many years have you been in business?</legend>
+            <p class="hint">Under your current ownership or overall, whichever is longer.</p>
             <div class="opts">
-              <div class="opt"><input type="checkbox" name="priorities" id="p1" value="Getting the best price"><label for="p1">Getting the best price</label></div>
-              <div class="opt"><input type="checkbox" name="priorities" id="p2" value="Taking care of my team"><label for="p2">Taking care of my team</label></div>
-              <div class="opt"><input type="checkbox" name="priorities" id="p3" value="Keeping it confidential"><label for="p3">Keeping it confidential</label></div>
-              <div class="opt"><input type="checkbox" name="priorities" id="p4" value="A clean, quick exit"><label for="p4">A clean, quick exit</label></div>
-              <div class="opt"><input type="checkbox" name="priorities" id="p5" value="Protecting my name and legacy"><label for="p5">Protecting my legacy</label></div>
-              <div class="opt"><input type="checkbox" name="priorities" id="p6" value="Staying on for a transition"><label for="p6">Staying on for a while</label></div>
+              <div class="opt"><input type="radio" name="years_in_business" id="y0" value="Under 5 years"><label for="y0">Under 5 years</label></div>
+              <div class="opt"><input type="radio" name="years_in_business" id="y1" value="5-10 years"><label for="y1">5–10 years</label></div>
+              <div class="opt"><input type="radio" name="years_in_business" id="y2" value="10-20 years"><label for="y2">10–20 years</label></div>
+              <div class="opt"><input type="radio" name="years_in_business" id="y3" value="20-30 years"><label for="y3">20–30 years</label></div>
+              <div class="opt"><input type="radio" name="years_in_business" id="y4" value="30+ years"><label for="y4">30+ years</label></div>
             </div>
           </fieldset>
-          <fieldset class="fstep" data-step="5">
+          <fieldset class="fstep" data-step="5" data-req="employees,union">
+            <legend>Tell us about your team.</legend>
+            <p class="qlabel">How many employees do you have?</p>
+            <div class="opts three">
+              <div class="opt"><input type="radio" name="employees" id="e0" value="1-10"><label for="e0">1–10</label></div>
+              <div class="opt"><input type="radio" name="employees" id="e1" value="11-25"><label for="e1">11–25</label></div>
+              <div class="opt"><input type="radio" name="employees" id="e2" value="26-50"><label for="e2">26–50</label></div>
+              <div class="opt"><input type="radio" name="employees" id="e3" value="51-100"><label for="e3">51–100</label></div>
+              <div class="opt"><input type="radio" name="employees" id="e4" value="101-250"><label for="e4">101–250</label></div>
+              <div class="opt"><input type="radio" name="employees" id="e5" value="250+"><label for="e5">250+</label></div>
+            </div>
+            <p class="qlabel">Is your workforce unionized?</p>
+            <div class="opts">
+              <div class="opt"><input type="radio" name="union" id="u0" value="No"><label for="u0">No</label></div>
+              <div class="opt"><input type="radio" name="union" id="u1" value="Yes"><label for="u1">Yes</label></div>
+            </div>
+          </fieldset>
+          <fieldset class="fstep" data-step="6" data-req="service_area">
+            <legend>What area do you service?</legend>
+            <p class="hint">Cities, counties or states. Just the general area.</p>
+            <div class="field"><label for="service_area">Service area</label><input id="service_area" name="service_area" type="text" autocomplete="off" placeholder="e.g. Miami-Dade &amp; Broward County, FL" required></div>
+          </fieldset>
+          <fieldset class="fstep" data-step="7">
+            <legend>A few numbers <span class="opt-tag">(optional)</span></legend>
+            <p class="hint">Estimates are fine. Skip anything you'd rather discuss on the call.</p>
+            <div class="field"><label for="avg_job_size">Average job size</label><input id="avg_job_size" name="avg_job_size" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. $6,500"></div>
+            <div class="two">
+              <div class="field"><label for="annual_revenue">Annual revenue</label><input id="annual_revenue" name="annual_revenue" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. $8.2M"></div>
+              <div class="field"><label for="ebitda">EBITDA</label><input id="ebitda" name="ebitda" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. $1.4M"></div>
+            </div>
+          </fieldset>
+          <fieldset class="fstep" data-step="8" data-req="owner_plans,timeline">
+            <legend>What are your plans?</legend>
+            <p class="qlabel">After the sale, would you like to…</p>
+            <div class="opts">
+              <div class="opt"><input type="radio" name="owner_plans" id="o0" value="Step away right after closing"><label for="o0">Step away right after closing</label></div>
+              <div class="opt"><input type="radio" name="owner_plans" id="o1" value="Stay on for a transition (6-24 months)"><label for="o1">Stay on for a transition (6–24 months)</label></div>
+              <div class="opt"><input type="radio" name="owner_plans" id="o2" value="Stay on long-term in a leadership role"><label for="o2">Stay on long-term</label></div>
+              <div class="opt"><input type="radio" name="owner_plans" id="o3" value="Not sure yet"><label for="o3">Not sure yet</label></div>
+            </div>
+            <p class="qlabel">When would you like to sell?</p>
+            <div class="opts">
+              <div class="opt"><input type="radio" name="timeline" id="t0" value="As soon as possible"><label for="t0">As soon as possible</label></div>
+              <div class="opt"><input type="radio" name="timeline" id="t1" value="Within 12 months"><label for="t1">Within 12 months</label></div>
+              <div class="opt"><input type="radio" name="timeline" id="t2" value="1-3 years"><label for="t2">In 1–3 years</label></div>
+              <div class="opt"><input type="radio" name="timeline" id="t3" value="Just exploring"><label for="t3">Just exploring</label></div>
+            </div>
+          </fieldset>
+          <fieldset class="fstep" data-step="9">
             <legend>Where should we send your valuation?</legend>
             <p class="hint">A senior advisor will call you within one business day. We never share your information.</p>
             <div class="two">
@@ -818,7 +868,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
               <div class="field"><label for="phone">Best phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
             </div>
             <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-            <div class="field"><label for="message">Anything we should know? <span style="font-weight:400;color:var(--text-2)">(optional)</span></label><textarea id="message" name="message" placeholder="Years in business, number of techs, maintenance agreements…"></textarea></div>
+            <div class="field"><label for="message">Anything else we should know? <span style="font-weight:400;color:var(--text-2)">(optional)</span></label><textarea id="message" name="message" placeholder="Maintenance agreements, key managers, anything else…"></textarea></div>
           </fieldset>
 
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
@@ -863,7 +913,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <!-- PS -->
 <section class="ps">
   <div class="narrow">
-    <p><span class="p">P.S.</span> If you skipped to the bottom, here's the short version: buyers are actively looking for well-run HVAC companies, we keep the whole process confidential, and <b>you pay us nothing</b>. Two minutes will tell you whether we're a fit.</p>
+    <p><span class="p">P.S.</span> If you skipped to the bottom, here's the short version: buyers are actively looking for well-run HVAC companies, we keep the whole process confidential, and <b>you pay us nothing</b>. A few minutes will tell you whether we're a fit.</p>
     <div class="center" style="margin-top:1.8rem"><a href="#apply" class="btn">Get My Free Confidential Valuation →</a></div>
   </div>
 </section>
@@ -897,9 +947,12 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     err.textContent='';
   }
   function valid(){
-    var s=steps[cur-1];
-    if(cur<=3 && !s.querySelector('input:checked')){ err.textContent='Please choose one to continue.'; return false; }
-    if(cur===4 && !s.querySelector('input:checked')){ err.textContent='Please check at least one.'; return false; }
+    var s=steps[cur-1], req=(s.dataset.req||'').split(',').filter(Boolean);
+    for(var i=0;i<req.length;i++){
+      var nm=req[i], inp=s.querySelector('[name="'+nm+'"]');
+      if(inp && inp.type==='radio'){ if(!s.querySelector('input[name="'+nm+'"]:checked')){ err.textContent = req.length>1 ? 'Please answer both questions to continue.' : 'Please choose one to continue.'; return false; } }
+      else if(inp && !inp.value.trim()){ err.textContent='Please fill this in to continue.'; inp.focus(); return false; }
+    }
     if(cur===total){
       var el=form.elements, n=el['name'].value.trim(), p=el['phone'].value.trim(), e=el['email'].value.trim();
       if(!n||!p||!e){ err.textContent='Please fill in your name, phone and email.'; return false; }
@@ -920,14 +973,14 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     });
   });
 
-  form.querySelectorAll('input[type=radio]').forEach(function(r){ r.addEventListener('change', function(){ setTimeout(function(){ if(cur<total && valid()) show(cur+1); }, 220); }); });
+  form.querySelectorAll('input[type=radio]').forEach(function(r){ r.addEventListener('change', function(){ var st=r.closest('.fstep'); if(!st || !st.dataset.auto) return; setTimeout(function(){ if(cur<total && valid()) show(cur+1); }, 220); }); });
   back.addEventListener('click', function(){ if(cur>1) show(cur-1); });
   next.addEventListener('click', function(){ if(!valid()) return; if(cur<total){ show(cur+1); return; } submit(); });
   form.addEventListener('submit', function(e){ e.preventDefault(); next.click(); });
 
   function submit(){
-    var fd=new FormData(form), pr=fd.getAll('priorities'); fd.delete('priorities'); fd.append('priorities', pr.join(', '));
-    fd.set('_subject','HVAC funnel lead · '+(fd.get('revenue')||'')+' · '+(fd.get('timeline')||''));
+    var fd=new FormData(form);
+    fd.set('_subject','HVAC lead · '+(fd.get('revenue')||'')+' · '+(fd.get('years_in_business')||'')+' · '+(fd.get('employees')||'')+' employees · '+(fd.get('timeline')||''));
     next.disabled=true; next.textContent='Sending…';
     fetch('https://formspree.io/f/mzzvwzvb',{method:'POST',body:fd,headers:{'Accept':'application/json'}})
       .then(function(r){ if(!r.ok) throw 0;
