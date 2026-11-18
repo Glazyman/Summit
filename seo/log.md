@@ -20,3 +20,4 @@
 2026-11-17 Offer correction: removed "free confidential valuation" promises; offer is now a free confidential buyer call — /sell-hvac-business.html (+schema/FAQ), /sell-and-retire.html, /asset-vs-stock-sale-hvac.html
 2026-11-18 Offer-rule fixes: replaced 'Get a Confidential Assessment' CTAs with 'Book a Free Confidential Buyer Call' and 'Valuation & Readiness' step with 'Readiness Review' — /, /founders.html, /about.html
 2026-11-18 Entity-clarity 'Who we are' plain-text block + AboutPage/ProfessionalService JSON-LD (same @id as homepage) — /about.html#who-we-are
+2026-11-18 IndexNow ping for /, /about.html, /founders.html: HTTP 200; live confirmed
