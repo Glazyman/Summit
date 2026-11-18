@@ -18,3 +18,5 @@
 2026-11-17 LinkedIn company page added as schema sameAs — /, /sell-hvac-business.html, /sell-and-retire.html
 2026-11-17 Positioning correction: Summit is BUY-SIDE (owner-confirmed). Removed "we represent owners / negotiate for you / sell-side" claims — /, /founders.html, /about.html, /sell-and-retire.html, /sell-hvac-business.html (+schema), /asset-vs-stock-sale-hvac.html, /investors.html, llms.txt
 2026-11-17 Offer correction: removed "free confidential valuation" promises; offer is now a free confidential buyer call — /sell-hvac-business.html (+schema/FAQ), /sell-and-retire.html, /asset-vs-stock-sale-hvac.html
+2026-11-18 Offer-rule fixes: replaced 'Get a Confidential Assessment' CTAs with 'Book a Free Confidential Buyer Call' and 'Valuation & Readiness' step with 'Readiness Review' — /, /founders.html, /about.html
+2026-11-18 Entity-clarity 'Who we are' plain-text block + AboutPage/ProfessionalService JSON-LD (same @id as homepage) — /about.html#who-we-are
