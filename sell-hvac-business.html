@@ -991,6 +991,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
     var fd=new FormData(form);
     fd.set('_subject','HVAC lead · '+(fd.get('revenue')||'')+' · '+(fd.get('years_in_business')||'')+' · '+(fd.get('employees')||'')+' employees · '+(fd.get('timeline')||''));
     next.disabled=true; next.textContent='Sending…';
+    (function(f,n){try{var o={};f.forEach(function(v,k){if(typeof v==='string'&&(k.charAt(0)!=='_'||k==='_gotcha')){o[k]=o[k]?o[k]+', '+v:v}});o.form=n;o.page=location.href.split('#')[0];fetch('https://summitcrm.work/api/public/website-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o),keepalive:true}).catch(function(){})}catch(e){}})(fd,'hvac funnel'); // also send to SummitCRM (Formspree stays primary)
     fetch('https://formspree.io/f/mzzvwzvb',{method:'POST',body:fd,headers:{'Accept':'application/json'}})
       .then(function(r){ if(!r.ok) throw 0;
         form.style.display='none'; document.querySelector('.fhead').style.display='none';
