@@ -102,7 +102,8 @@ p+p{margin-top:1em}
 .optin .stepl .bar{display:block;height:8px;background:var(--gray);border-radius:4px;margin:10px auto 16px;max-width:320px;overflow:hidden}
 .optin .stepl .bar i{display:block;height:100%;width:50%;background:repeating-linear-gradient(45deg,var(--red) 0 10px,var(--red-2) 10px 20px);animation:barmove 1s linear infinite}
 @keyframes barmove{to{background-position:28px 0}}
-.optin h3{font-size:1.55rem;margin-bottom:1rem}
+.optin h3{font-size:1.55rem;margin-bottom:.4rem;line-height:1.25}
+.optin-sub{color:var(--text-2);font-size:.95rem;margin-bottom:1rem}
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .revs button{font:inherit;font-weight:700;font-size:1rem;color:var(--navy);background:#fff;border:2px solid var(--line);border-radius:4px;padding:14px 8px;cursor:pointer;transition:border-color .15s,background .15s}
 .revs button:hover{border-color:var(--red);background:#FFF7F7;color:var(--red)}
@@ -544,8 +545,9 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
 <div class="wrap">
   <div class="optin">
     <div class="optin-in">
-      <div class="stepl">Step 1: Tell us about your company<span class="bar"><i></i></span></div>
-      <h3>What's your company's approximate annual revenue?</h3>
+      <div class="stepl">Private &amp; confidential · 60 seconds<span class="bar"><i></i></span></div>
+      <h3>Buyers are actively acquiring HVAC companies right now. <span class="red">Where does yours fit?</span></h3>
+      <p class="optin-sub">Tap your annual revenue to get started:</p>
       <div class="revs" id="revs">
         <button type="button" data-v="$2M - $5M">$2M – $5M</button>
         <button type="button" data-v="$5M - $10M">$5M – $10M</button>
@@ -554,7 +556,7 @@ footer .disc{max-width:760px;margin:12px auto 0;font-size:.74rem;color:rgba(255,
         <button type="button" data-v="$50M+">$50M+</button>
         <button type="button" data-v="Under $2M">Under $2M</button>
       </div>
-      <p class="fine">Your answers are private and never shared with anyone.</p>
+      <p class="fine">No financials needed. Nobody sees this but us.</p>
     </div>
   </div>
 </div>
