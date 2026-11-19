@@ -1,6 +1,6 @@
 # Backlog (highest expected inquiries per hour first)
 
-1. **NEW PAGES: /sell-plumbing-business.html, /sell-electrical-contracting-business.html** — genuinely trade-specific value drivers (not find-and-replace of the HVAC page).
+1. **NEW PAGE: /sell-electrical-contracting-business.html** — genuinely trade-specific value drivers (licensing, bonding/WIP, service vs. project mix); model on /sell-plumbing-business.html.
 2. **OWNER: real founder photo + name** for the HVAC page hero/letter (biggest trust lift; AI engines also cite named experts).
 3. Industry money pages using the HVAC template: /sell-security-company.html, /sell-fencing-company.html — each needs genuinely industry-specific valuation drivers, not a find-and-replace.
 4. /sell-and-retire.html restyle to match the HVAC page; decide whether it should be canonical for "sell my business and retire".
@@ -12,4 +12,6 @@
 10. Finish AI checks for remaining 22 questions in ai-prompts.md (~5/day).
 11. Link /sell-and-retire.html from homepage body copy (currently footer-only).
 
-Done: ~~Search Console verified (owner, 2026-11-17) + Bing verified~~ · ~~Testimonials verified real~~ · ~~revenue ranges $2M–$50M~~ · ~~HVAC money page~~ (2026-11-17) · ~~asset vs stock guide~~ · ~~sell-and-retire orphan~~ · ~~sell-hvac-company-to-private-equity.html, hvac-business-valuation.html, do-i-need-a-business-broker.html (2026-11-18, built by owner session)~~
+Done: ~~/sell-plumbing-business.html (2026-11-19)~~ · ~~Search Console verified (owner, 2026-11-17) + Bing verified~~ · ~~Testimonials verified real~~ · ~~revenue ranges $2M–$50M~~ · ~~HVAC money page~~ (2026-11-17) · ~~asset vs stock guide~~ · ~~sell-and-retire orphan~~ · ~~sell-hvac-company-to-private-equity.html, hvac-business-valuation.html, do-i-need-a-business-broker.html (2026-11-18, built by owner session)~~
+
+12. Note for owner: Microsoft Clarity script is present on all pages (pre-existing; not added by SEO routine). Confirm intended.
