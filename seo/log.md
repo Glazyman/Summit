@@ -25,3 +25,4 @@
 2026-11-18 Google Keyword Planner volumes pulled (seo/keyword-planner-2026-11-18.md); "HVAC business broker" (100–1K, bids to $136) added to HVAC page title/header/FAQ + schema; keyword map volumes filled; backlog re-ordered by volume + broker-question page added
 2026-11-18 NEW pages: /sell-hvac-company-to-private-equity.html, /hvac-business-valuation.html, /do-i-need-a-business-broker.html (Article+FAQ+Breadcrumb schema, funnel styling, CTAs → HVAC form); linked from HVAC page FAQ/valuation/footer + homepage footer; sitemap + llms.txt
 2026-11-19 NEW page /sell-plumbing-business.html (Article+Breadcrumb+FAQPage 6 Q&As schema; plumbing-specific license, service-vs-construction, WIP/bonding, callbacks); linked from footers on HVAC page, valuation, PE, broker guides + homepage Quick Links; sitemap lastmods refreshed; llms.txt entry
+2026-11-19 Live confirmed /sell-plumbing-business.html (200); IndexNow ping for plumbing page, HVAC page, llms.txt: HTTP 200
