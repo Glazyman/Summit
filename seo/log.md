@@ -27,3 +27,4 @@
 2026-11-19 NEW page /sell-plumbing-business.html (Article+Breadcrumb+FAQPage 6 Q&As schema; plumbing-specific license, service-vs-construction, WIP/bonding, callbacks); linked from footers on HVAC page, valuation, PE, broker guides + homepage Quick Links; sitemap lastmods refreshed; llms.txt entry
 2026-11-19 Live confirmed /sell-plumbing-business.html (200); IndexNow ping for plumbing page, HVAC page, llms.txt: HTTP 200
 2026-11-20 Health check clean (14/14 URLs 200, JSON-LD valid, no broken links/orphans). NEW page /sell-electrical-contracting-business.html (Article+Breadcrumb+FAQPage 6 Q&As; service vs project mix, backlog quality, licensing, bonding/WIP/retainage, assignability); linked from footers on HVAC page, plumbing, valuation, PE, broker guides, homepage Quick Links + plumbing Keep-reading; sitemap lastmods, llms.txt
+2026-11-20 Live confirmed /sell-electrical-contracting-business.html (200); IndexNow ping electrical, plumbing, HVAC, llms.txt: HTTP 200
