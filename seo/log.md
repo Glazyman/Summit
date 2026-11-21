@@ -30,3 +30,4 @@
 2026-11-20 Live confirmed /sell-electrical-contracting-business.html (200); IndexNow ping electrical, plumbing, HVAC, llms.txt: HTTP 200
 2026-11-21 Health check: 15/15 sitemap URLs 200, JSON-LD valid, no broken links/orphans. Offer-rule fix: removed "honest look at what your business could be worth" from CTA strip — /about.html
 2026-11-21 NEW page /sell-security-company.html (Article+Breadcrumb+FAQPage 6 Q&As; RMR, attrition, subscriber-contract assignability, central station, licensing; no multiples quoted); linked from footers on HVAC page, plumbing, electrical, valuation, PE, broker guides + homepage Quick Links + electrical Keep-reading; sitemap lastmods, llms.txt
+2026-11-21 Live confirmed /sell-security-company.html (200); IndexNow ping security, about, HVAC, llms.txt: HTTP 200
