@@ -35,3 +35,8 @@ Record per check: date · assistant · Summit named? (Y/N) · what was said · s
 - Q1 "How do I sell my HVAC business?" — Summit NOT present. Sources: Axial, Tradify, Synergy BB, HVACInsider, FieldEdge, Sunbelt, Cowen Partners, OffDeal, Raincatcher, Dealonomy, BizBuySell, Robbinex.
 - Q24 "What is Summit Mergers?" — Summit NOT identified; results confuse it with Summit M&A, Summit Acquisitions Group, Summit Capital Advisors (Axial profiles). Entity is unclear to search engines. Action: directory/Axial profile drafts; make "who we are" plain text clearer (about.html).
 - Q9 "Brokers that don't charge the seller a fee" — Summit NOT present. Sources note buyer-paid models exist but carry conflict-of-interest suspicion. Action: add a plain-text, honest explainer on how buyer-side fee works (needs owner confirmation of exact fee mechanics; do not invent).
+
+2026-11-25 weekly run (WebSearch standard; 3 more of 25 checked):
+- Q24 "Summit Mergers HVAC business broker" — summitmergers.com NOW appears (homepage listed; described as discreet M&A advisory, buyer matching, performance-based fee, zero upfront fees). Improvement vs 11-17. Still confused with Summit Succession (Ohio) and Summit Partners (Atlanta). HVAC not associated with Summit in the snippet.
+- Q9 "Brokers that don't charge seller" — Summit absent. Sources: Website Closers, Raincatcher, Certified BB, Main Street Exit Partners; consensus is seller usually pays, buyer-paid is uncommon. Action still: owner confirms fee mechanics for plain-text explainer.
+- Q8 "Sell HVAC company without employees finding out" — Summit absent. Sources: Duedilio, contractorexit.com, homesteadsp, ctacquisitions, bridgepointbb. Action: shipped /sell-hvac-business-confidentially.html.
