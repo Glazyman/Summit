@@ -27,3 +27,7 @@ Contact: info@summitmergers.com · (845) 402-6614
 - [About](https://summitmergers.com/about.html): who Summit Mergers LLC is, who pays the fee (the buyer), timeline, industries and contact details in plain text
 - [Deals Closed](https://summitmergers.com/deals.html): completed transactions
 - [What Is an Earnout When You Sell an HVAC Company?](https://summitmergers.com/hvac-earnout-private-equity.html): for owners of $2M–$50M HVAC companies; how an earnout works vs. rollover equity and holdbacks, the risks, and terms to have your attorney check
+- [What Is My Plumbing Business Worth?](https://summitmergers.com/plumbing-business-valuation.html): how plumbing companies are valued; SDE vs. EBITDA, add-backs, service vs. new construction, the master plumber license, what raises value
+- [What Is My Electrical Contracting Business Worth?](https://summitmergers.com/electrical-contracting-business-valuation.html): how electrical contractors are valued; residential vs. commercial vs. industrial, backlog and WIP, the license holder, what raises value
+- [HVAC Valuation Multiples Explained](https://summitmergers.com/hvac-valuation-multiples.html): SDE vs. EBITDA multiples, platform vs. add-on acquisitions, what moves the multiple, why published multiples disagree
+- [How to Sell a Mechanical Contracting Business](https://summitmergers.com/sell-mechanical-contracting-business.html): what drives value, licenses, bonding, WIP and backlog, who buys mechanical contractors, steps and confidentiality
