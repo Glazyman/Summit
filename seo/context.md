@@ -26,3 +26,6 @@ Describing OTHER firms as "sell-side brokers that charge sellers" is fine. Testi
 ## OFFER RULE (owner-confirmed 2026-11-17): Summit does NOT offer valuations
 The conversion offer is a FREE CONFIDENTIAL BUYER CALL: a follow-up call to see if Summit has a buyer for the company and to introduce the owner to PE groups / family offices / strategic buyers.
 NEVER promise a "valuation", "free valuation", "confidential assessment", "what your company is worth" or "an honest read on what it could sell for". Educational content explaining HOW HVAC companies are valued is fine.
+
+Founder (owner-confirmed 2026-11-27): **Daniel Babayov**, Founder. Headshot img/daniel-babayov.jpg; Person schema @id https://summitmergers.com/about.html#daniel-babayov; section about.html#founder. Every Article's author is this Person, and every guide shows a "By Daniel Babayov, Founder of Summit Mergers" byline — new guides must do the same. Do NOT invent credentials, years of experience or deal counts for him.
+Google Business Profile: live (category Business broker). Search Console: owner-verified; real data now readable (2026-11-27 baseline ~120 impressions/day, avg position ~60; best page = electrical, pos 17–34).
